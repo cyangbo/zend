@@ -1,0 +1,27 @@
+
+框架结构流程:
+
+需要把源码地址根目录定位:public
+
+当浏览器访问首页http://www.zend.com
+相当于访问了:http://www.zend.com/index/index
+在hosts文件中看是否有重定向域名,这里是重定向到本机127.0.0.1
+在本机中80端口是apache在使用
+在Apache的httpd-vhosts.conf文件中配置了域名zend.com解析到E:\wamp\www\zend\public
+所以直接解析到public目录下面的inxex.php
+	index.php根据浏览器的url找到对应的控制器
+		先访问:\application\Bootstrap.php
+		再访问默认控制器是\application\controllers\IndexController.php
+	控制器调用\application\views\scripts\index\index.phtml
+	来显示
+
+分别在下面两个文件加上file_put_contents("d:/mylog.txt",__FILE__.date('Y-m-d H:i:s')."\r\n",FILE_APPEND);来测试
+\application\Bootstrap.php
+\application\controllers\IndexController.php
+输出如下:
+E:\wamp\www\zend\application\Bootstrap.php2015-03-22 00:11:29Bootstrap
+E:\wamp\www\zend\application\controllers\IndexController.php2015-03-22 00:11:29init
+E:\wamp\www\zend\application\controllers\IndexController.php2015-03-22 00:11:29IndexAction
+
+可以看到先访问的控制器是Bootstrap.php,这个控制器可以用来过滤控制器的访问
+例如在Bootstrap的控制器添加exit();可以断开控制器的访问
