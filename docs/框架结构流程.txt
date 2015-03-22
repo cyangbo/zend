@@ -25,3 +25,24 @@ E:\wamp\www\zend\application\controllers\IndexController.php2015-03-22 00:11:29I
 
 可以看到先访问的控制器是Bootstrap.php,这个控制器可以用来过滤控制器的访问
 例如在Bootstrap的控制器添加exit();可以断开控制器的访问
+
+
+数据库相关操作:
+数据库:testzf
+create table `message`(
+	`message_id` int(10) unsigned not null auto_increment,
+	`sender` varchar(64) not null,
+	`getter` varchar(64) not null,
+	`sendtime` datetime not null,
+	`content` varchar(2000) not null,
+	primary key (`message_id`)
+	)
+	engine = InnoDB default charset=utf8;
+	
+INSERT INTO `message` VALUES (1,'周星驰','刘德华','1899-12-29','haohao');
+INSERT INTO `message` VALUES (2,'周星驰2','刘德华2','1899-12-29','haohao');
+INSERT INTO `message` VALUES (3,'周星驰3','刘德华3','1899-12-29','haohao');
+INSERT INTO `message` VALUES (4,'周星驰4','刘德华4','1899-12-29','haohao');
+INSERT INTO `message` VALUES (5,'周星驰5','刘德华5','1899-12-29','haohao');
+
+
