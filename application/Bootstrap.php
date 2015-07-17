@@ -1,6 +1,11 @@
 <?php
 
-//
+/**
+ * Bootstrap引导程序:用来过滤控制器的访问
+ * 引导程序里面不需要任何方法
+ * @author Administrator
+ *
+ */
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
 	function __construct($app){

@@ -20,6 +20,8 @@ class IndexController extends Zend_Controller_Action
         
        // $this->render('index');
     	file_put_contents("d:/mylog.txt",__FILE__.date('Y-m-d H:i:s')."IndexAction\r\n",FILE_APPEND);
+    	
+    	
     }
 
 

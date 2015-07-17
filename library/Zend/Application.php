@@ -369,6 +369,7 @@ class Zend_Application
     public function bootstrap($resource = null)
     {
         $this->getBootstrap()->bootstrap($resource);
+        //echo "aa";
         return $this;
     }
 
@@ -379,7 +380,9 @@ class Zend_Application
      */
     public function run()
     {
+    	//echo "bb";
         $this->getBootstrap()->run();
+        //echo "cc";
     }
 
     /**

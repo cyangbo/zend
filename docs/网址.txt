@@ -1,0 +1,13 @@
+
+#zend框架
+<VirtualHost *:80>
+    DocumentRoot "d:\wamp\www\zend\public"
+    ServerName myzend.com
+</VirtualHost>
+
+
+#zend文档API
+<VirtualHost *:80>
+    DocumentRoot "d:\wamp\www\zend\apidoc"
+    ServerName zendapi.com
+</VirtualHost>
