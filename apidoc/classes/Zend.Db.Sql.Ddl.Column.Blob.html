@@ -1,0 +1,592 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend Framework » \Zend\Db\Sql\Ddl\Column\Blob</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">
+                        Zend Framework
+                    </a><div class="nav-collapse"><ul class="nav"><li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/ZendXml.html"><i class="icon-th"></i> ZendXml</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+</ul>
+</li></ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public inherited"><a href="#__construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#addConstraint" title="addConstraint :: "><span class="description">addConstraint()
+        </span><pre>addConstraint()</pre></a></li>
+<li class="method public inherited"><a href="#getDefault" title="getDefault :: "><span class="description">getDefault()
+        </span><pre>getDefault()</pre></a></li>
+<li class="method public inherited"><a href="#getExpressionData" title="getExpressionData :: "><span class="description">getExpressionData()
+        </span><pre>getExpressionData()</pre></a></li>
+<li class="method public inherited"><a href="#getLength" title="getLength :: "><span class="description">getLength()
+        </span><pre>getLength()</pre></a></li>
+<li class="method public inherited"><a href="#getName" title="getName :: "><span class="description">getName()
+        </span><pre>getName()</pre></a></li>
+<li class="method public inherited"><a href="#getOptions" title="getOptions :: "><span class="description">getOptions()
+        </span><pre>getOptions()</pre></a></li>
+<li class="method public inherited"><a href="#isNullable" title="isNullable :: "><span class="description">isNullable()
+        </span><pre>isNullable()</pre></a></li>
+<li class="method public inherited"><a href="#setDefault" title="setDefault :: "><span class="description">setDefault()
+        </span><pre>setDefault()</pre></a></li>
+<li class="method public inherited"><a href="#setLength" title="setLength :: "><span class="description">setLength()
+        </span><pre>setLength()</pre></a></li>
+<li class="method public inherited"><a href="#setName" title="setName :: "><span class="description">setName()
+        </span><pre>setName()</pre></a></li>
+<li class="method public inherited"><a href="#setNullable" title="setNullable :: "><span class="description">setNullable()
+        </span><pre>setNullable()</pre></a></li>
+<li class="method public inherited"><a href="#setOption" title="setOption :: "><span class="description">setOption()
+        </span><pre>setOption()</pre></a></li>
+<li class="method public inherited"><a href="#setOptions" title="setOptions :: "><span class="description">setOptions()
+        </span><pre>setOptions()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected inherited"><a href="#getLengthExpression" title="getLengthExpression :: "><span class="description">getLengthExpression()
+        </span><pre>getLengthExpression()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected inherited"><a href="#%24constraints" title="$constraints :: "><span class="description">$constraints</span><pre>$constraints</pre></a></li>
+<li class="property protected inherited"><a href="#%24default" title="$default :: "><span class="description">$default</span><pre>$default</pre></a></li>
+<li class="property protected inherited"><a href="#%24isNullable" title="$isNullable :: "><span class="description">$isNullable</span><pre>$isNullable</pre></a></li>
+<li class="property protected inherited"><a href="#%24length" title="$length :: "><span class="description">$length</span><pre>$length</pre></a></li>
+<li class="property protected inherited"><a href="#%24name" title="$name :: "><span class="description">$name</span><pre>$name</pre></a></li>
+<li class="property protected inherited"><a href="#%24options" title="$options :: "><span class="description">$options</span><pre>$options</pre></a></li>
+<li class="property protected inherited"><a href="#%24specification" title="$specification :: "><span class="description">$specification</span><pre>$specification</pre></a></li>
+<li class="property protected "><a href="#%24type" title="$type :: "><span class="description">&lt;p&gt;Change type to blob&lt;/p&gt;</span><pre>$type</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CZend%5CDb%5CSql%5CDdl%5CColumn%5CBlob" id="\Zend\Db\Sql\Ddl\Column\Blob"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Db.html">Db</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Db.Sql.html">Sql</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Db.Sql.Ddl.html">Ddl</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Db.Sql.Ddl.Column.html">Column</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Db.Sql.Ddl.Column.Blob.html">Blob</a>
+</li>
+</ul>
+<div href="../classes/Zend.Db.Sql.Ddl.Column.Blob.html" class="element class"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($name, int $length, $nullable, $default, array $options) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::__construct()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$length</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$nullable</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$options</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="addConstraint" id="addConstraint"></a><div class="element clickable method public addConstraint" data-toggle="collapse" data-target=".addConstraint .collapse">
+<h2>addConstraint()
+        </h2>
+<pre>addConstraint(\Zend\Db\Sql\Ddl\Constraint\ConstraintInterface $constraint) : \Zend\Db\Sql\Ddl\Column\self</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::addConstraint()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::addConstraint()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$constraint</h4>
+<code><a href="../classes/Zend.Db.Sql.Ddl.Constraint.ConstraintInterface.html">\Zend\Db\Sql\Ddl\Constraint\ConstraintInterface</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Db\Sql\Ddl\Column\self</code></div>
+</div></div>
+</div>
+<a name="getDefault" id="getDefault"></a><div class="element clickable method public getDefault" data-toggle="collapse" data-target=".getDefault .collapse">
+<h2>getDefault()
+        </h2>
+<pre>getDefault() : null | string | int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::getDefault()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::getDefault()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code><code>string</code><code>int</code>
+</div>
+</div></div>
+</div>
+<a name="getExpressionData" id="getExpressionData"></a><div class="element clickable method public getExpressionData" data-toggle="collapse" data-target=".getExpressionData .collapse">
+<h2>getExpressionData()
+        </h2>
+<pre>getExpressionData() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::getExpressionData()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getLength" id="getLength"></a><div class="element clickable method public getLength" data-toggle="collapse" data-target=".getLength .collapse">
+<h2>getLength()
+        </h2>
+<pre>getLength() : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::getLength()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a name="getName" id="getName"></a><div class="element clickable method public getName" data-toggle="collapse" data-target=".getName .collapse">
+<h2>getName()
+        </h2>
+<pre>getName() : null | string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::getName()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::getName()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code><code>string</code>
+</div>
+</div></div>
+</div>
+<a name="getOptions" id="getOptions"></a><div class="element clickable method public getOptions" data-toggle="collapse" data-target=".getOptions .collapse">
+<h2>getOptions()
+        </h2>
+<pre>getOptions() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::getOptions()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::getOptions()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="isNullable" id="isNullable"></a><div class="element clickable method public isNullable" data-toggle="collapse" data-target=".isNullable .collapse">
+<h2>isNullable()
+        </h2>
+<pre>isNullable() : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::isNullable()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::isNullable()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="setDefault" id="setDefault"></a><div class="element clickable method public setDefault" data-toggle="collapse" data-target=".setDefault .collapse">
+<h2>setDefault()
+        </h2>
+<pre>setDefault(null | string | int $default) : \Zend\Db\Sql\Ddl\Column\self</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::setDefault()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::setDefault()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>nullstringint</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Db\Sql\Ddl\Column\self</code></div>
+</div></div>
+</div>
+<a name="setLength" id="setLength"></a><div class="element clickable method public setLength" data-toggle="collapse" data-target=".setLength .collapse">
+<h2>setLength()
+        </h2>
+<pre>setLength(int $length) : \Zend\Db\Sql\Ddl\Column\self</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::setLength()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$length</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Db\Sql\Ddl\Column\self</code></div>
+</div></div>
+</div>
+<a name="setName" id="setName"></a><div class="element clickable method public setName" data-toggle="collapse" data-target=".setName .collapse">
+<h2>setName()
+        </h2>
+<pre>setName(string $name) : \Zend\Db\Sql\Ddl\Column\self</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::setName()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::setName()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Db\Sql\Ddl\Column\self</code></div>
+</div></div>
+</div>
+<a name="setNullable" id="setNullable"></a><div class="element clickable method public setNullable" data-toggle="collapse" data-target=".setNullable .collapse">
+<h2>setNullable()
+        </h2>
+<pre>setNullable(bool $nullable) : \Zend\Db\Sql\Ddl\Column\self</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::setNullable()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::setNullable()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$nullable</h4>
+<code>bool</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Db\Sql\Ddl\Column\self</code></div>
+</div></div>
+</div>
+<a name="setOption" id="setOption"></a><div class="element clickable method public setOption" data-toggle="collapse" data-target=".setOption .collapse">
+<h2>setOption()
+        </h2>
+<pre>setOption(string $name, string $value) : \Zend\Db\Sql\Ddl\Column\self</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::setOption()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::setOption()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Db\Sql\Ddl\Column\self</code></div>
+</div></div>
+</div>
+<a name="setOptions" id="setOptions"></a><div class="element clickable method public setOptions" data-toggle="collapse" data-target=".setOptions .collapse">
+<h2>setOptions()
+        </h2>
+<pre>setOptions(array $options) : \Zend\Db\Sql\Ddl\Column\self</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::setOptions()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::setOptions()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Db\Sql\Ddl\Column\self</code></div>
+</div></div>
+</div>
+<a name="getLengthExpression" id="getLengthExpression"></a><div class="element clickable method protected getLengthExpression" data-toggle="collapse" data-target=".getLengthExpression .collapse">
+<h2>getLengthExpression()
+        </h2>
+<pre>getLengthExpression() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::getLengthExpression()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24constraints" id="$constraints"> </a><div class="element clickable property protected $constraints" data-toggle="collapse" data-target=".$constraints .collapse">
+<h2>$constraints</h2>
+<pre>$constraints : <a href="Zend.Db.Sql.Ddl.Constraint.ConstraintInterface.html#%5CZend%5CDb%5CSql%5CDdl%5CConstraint%5CConstraintInterface">\Zend\Db\Sql\Ddl\Constraint\ConstraintInterface[]</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::$$constraints</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::$$constraints</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24default" id="$default"> </a><div class="element clickable property protected $default" data-toggle="collapse" data-target=".$default .collapse">
+<h2>$default</h2>
+<pre>$default : null | string | int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::$$default</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::$$default</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24isNullable" id="$isNullable"> </a><div class="element clickable property protected $isNullable" data-toggle="collapse" data-target=".$isNullable .collapse">
+<h2>$isNullable</h2>
+<pre>$isNullable : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::$$isNullable</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::$$isNullable</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24length" id="$length"> </a><div class="element clickable property protected $length" data-toggle="collapse" data-target=".$length .collapse">
+<h2>$length</h2>
+<pre>$length : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::$$length</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24name" id="$name"> </a><div class="element clickable property protected $name" data-toggle="collapse" data-target=".$name .collapse">
+<h2>$name</h2>
+<pre>$name : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::$$name</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::$$name</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24options" id="$options"> </a><div class="element clickable property protected $options" data-toggle="collapse" data-target=".$options .collapse">
+<h2>$options</h2>
+<pre>$options : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::$$options</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::$$options</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24specification" id="$specification"> </a><div class="element clickable property protected $specification" data-toggle="collapse" data-target=".$specification .collapse">
+<h2>$specification</h2>
+<pre>$specification : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\Column::$$specification</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Zend\Db\Sql\Ddl\Column\AbstractLengthColumn::$$specification</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24type" id="$type"> </a><div class="element clickable property protected $type" data-toggle="collapse" data-target=".$type .collapse">
+<h2>&lt;p&gt;Change type to blob&lt;/p&gt;</h2>
+<pre>$type : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a8</a> and<br>
+            generated on 2015-06-18T09:25:23-05:00.<br></footer></div>
+</div>
+</body>
+</html>

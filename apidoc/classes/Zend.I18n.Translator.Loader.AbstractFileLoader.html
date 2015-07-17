@@ -1,0 +1,183 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend Framework » \Zend\I18n\Translator\Loader\AbstractFileLoader</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">
+                        Zend Framework
+                    </a><div class="nav-collapse"><ul class="nav"><li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/ZendXml.html"><i class="icon-th"></i> ZendXml</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+</ul>
+</li></ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public inherited"><a href="#load" title="load :: Load translations from a file."><span class="description">Load translations from a file.</span><pre>load()</pre></a></li>
+<li class="method public "><a href="#setUseIncludePath" title="setUseIncludePath :: Indicate whether or not to use the include_path to resolve translation files"><span class="description">Indicate whether or not to use the include_path to resolve translation files</span><pre>setUseIncludePath()</pre></a></li>
+<li class="method public "><a href="#useIncludePath" title="useIncludePath :: Are we using the include_path to resolve translation files?"><span class="description">Are we using the include_path to resolve translation files?</span><pre>useIncludePath()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#resolveFile" title="resolveFile :: Resolve a translation file"><span class="description">Resolve a translation file</span><pre>resolveFile()</pre></a></li>
+<li class="method protected "><a href="#resolveViaIncludePath" title="resolveViaIncludePath :: Resolve a translation file via the include_path"><span class="description">Resolve a translation file via the include_path</span><pre>resolveViaIncludePath()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24useIncludePath" title="$useIncludePath :: Whether or not to consult the include_path when locating files"><span class="description">Whether or not to consult the include_path when locating files</span><pre>$useIncludePath</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CZend%5CI18n%5CTranslator%5CLoader%5CAbstractFileLoader" id="\Zend\I18n\Translator\Loader\AbstractFileLoader"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.I18n.html">I18n</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.I18n.Translator.html">Translator</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.I18n.Translator.Loader.html">Loader</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.I18n.Translator.Loader.AbstractFileLoader.html">AbstractFileLoader</a>
+</li>
+</ul>
+<div href="../classes/Zend.I18n.Translator.Loader.AbstractFileLoader.html" class="element class">
+<p class="short_description">Abstract file loader implementation; provides facilities around resolving
+files via the include_path.</p>
+<div class="details">
+<p class="long_description"></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
+<h2>Load translations from a file.</h2>
+<pre>load(string $locale, string $filename) : <a href="../classes/Zend.I18n.Translator.TextDomain.html">\Zend\I18n\Translator\TextDomain</a> | null</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\I18n\Translator\Loader\FileLoaderInterface::load()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locale</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$filename</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.I18n.Translator.TextDomain.html">\Zend\I18n\Translator\TextDomain</a></code><code>null</code>
+</div>
+</div></div>
+</div>
+<a name="setUseIncludePath" id="setUseIncludePath"></a><div class="element clickable method public setUseIncludePath" data-toggle="collapse" data-target=".setUseIncludePath .collapse">
+<h2>Indicate whether or not to use the include_path to resolve translation files</h2>
+<pre>setUseIncludePath(bool $flag) : \Zend\I18n\Translator\Loader\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$flag</h4>
+<code>bool</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\I18n\Translator\Loader\self</code></div>
+</div></div>
+</div>
+<a name="useIncludePath" id="useIncludePath"></a><div class="element clickable method public useIncludePath" data-toggle="collapse" data-target=".useIncludePath .collapse">
+<h2>Are we using the include_path to resolve translation files?</h2>
+<pre>useIncludePath() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="resolveFile" id="resolveFile"></a><div class="element clickable method protected resolveFile" data-toggle="collapse" data-target=".resolveFile .collapse">
+<h2>Resolve a translation file</h2>
+<pre>resolveFile(string $filename) : string | false</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Checks if the file exists and is readable, returning a boolean false if not; if the "useIncludePath"
+flag is enabled, it will attempt to resolve the file from the
+include_path if the file does not exist on the current working path.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filename</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>false</code>
+</div>
+</div></div>
+</div>
+<a name="resolveViaIncludePath" id="resolveViaIncludePath"></a><div class="element clickable method protected resolveViaIncludePath" data-toggle="collapse" data-target=".resolveViaIncludePath .collapse">
+<h2>Resolve a translation file via the include_path</h2>
+<pre>resolveViaIncludePath(string $filename) : string | false</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filename</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>false</code>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24useIncludePath" id="$useIncludePath"> </a><div class="element clickable property protected $useIncludePath" data-toggle="collapse" data-target=".$useIncludePath .collapse">
+<h2>Whether or not to consult the include_path when locating files</h2>
+<pre>$useIncludePath : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a8</a> and<br>
+            generated on 2015-06-18T09:14:12-05:00.<br></footer></div>
+</div>
+</body>
+</html>

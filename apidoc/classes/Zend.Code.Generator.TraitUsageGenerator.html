@@ -1,0 +1,584 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend Framework » \Zend\Code\Generator\TraitUsageGenerator</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">
+                        Zend Framework
+                    </a><div class="nav-collapse"><ul class="nav"><li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/ZendXml.html"><i class="icon-th"></i> ZendXml</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+</ul>
+</li></ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#addTrait" title="addTrait :: "><span class="description">addTrait()
+        </span><pre>addTrait()</pre></a></li>
+<li class="method public "><a href="#addTraitAlias" title="addTraitAlias :: "><span class="description">addTraitAlias()
+        </span><pre>addTraitAlias()</pre></a></li>
+<li class="method public "><a href="#addTraitOverride" title="addTraitOverride :: "><span class="description">addTraitOverride()
+        </span><pre>addTraitOverride()</pre></a></li>
+<li class="method public "><a href="#addTraits" title="addTraits :: "><span class="description">addTraits()
+        </span><pre>addTraits()</pre></a></li>
+<li class="method public "><a href="#addUse" title="addUse :: "><span class="description">addUse()
+        </span><pre>addUse()</pre></a></li>
+<li class="method public "><a href="#generate" title="generate :: "><span class="description">generate()
+        </span><pre>generate()</pre></a></li>
+<li class="method public inherited"><a href="#getIndentation" title="getIndentation :: "><span class="description">getIndentation()
+        </span><pre>getIndentation()</pre></a></li>
+<li class="method public inherited"><a href="#getSourceContent" title="getSourceContent :: "><span class="description">getSourceContent()
+        </span><pre>getSourceContent()</pre></a></li>
+<li class="method public "><a href="#getTraitAliases" title="getTraitAliases :: "><span class="description">getTraitAliases()
+        </span><pre>getTraitAliases()</pre></a></li>
+<li class="method public "><a href="#getTraitOverrides" title="getTraitOverrides :: "><span class="description">getTraitOverrides()
+        </span><pre>getTraitOverrides()</pre></a></li>
+<li class="method public "><a href="#getTraits" title="getTraits :: "><span class="description">getTraits()
+        </span><pre>getTraits()</pre></a></li>
+<li class="method public "><a href="#getUses" title="getUses :: "><span class="description">getUses()
+        </span><pre>getUses()</pre></a></li>
+<li class="method public "><a href="#hasTrait" title="hasTrait :: "><span class="description">hasTrait()
+        </span><pre>hasTrait()</pre></a></li>
+<li class="method public inherited"><a href="#isSourceDirty" title="isSourceDirty :: "><span class="description">isSourceDirty()
+        </span><pre>isSourceDirty()</pre></a></li>
+<li class="method public "><a href="#removeTrait" title="removeTrait :: "><span class="description">removeTrait()
+        </span><pre>removeTrait()</pre></a></li>
+<li class="method public "><a href="#removeTraitOverride" title="removeTraitOverride :: "><span class="description">removeTraitOverride()
+        </span><pre>removeTraitOverride()</pre></a></li>
+<li class="method public inherited"><a href="#setIndentation" title="setIndentation :: "><span class="description">setIndentation()
+        </span><pre>setIndentation()</pre></a></li>
+<li class="method public inherited"><a href="#setOptions" title="setOptions :: "><span class="description">setOptions()
+        </span><pre>setOptions()</pre></a></li>
+<li class="method public inherited"><a href="#setSourceContent" title="setSourceContent :: "><span class="description">setSourceContent()
+        </span><pre>setSourceContent()</pre></a></li>
+<li class="method public inherited"><a href="#setSourceDirty" title="setSourceDirty :: "><span class="description">setSourceDirty()
+        </span><pre>setSourceDirty()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24classGenerator" title="$classGenerator :: "><span class="description">$classGenerator</span><pre>$classGenerator</pre></a></li>
+<li class="property protected inherited"><a href="#%24indentation" title="$indentation :: "><span class="description">&lt;p&gt;4 spaces by default&lt;/p&gt;</span><pre>$indentation</pre></a></li>
+<li class="property protected inherited"><a href="#%24isSourceDirty" title="$isSourceDirty :: "><span class="description">$isSourceDirty</span><pre>$isSourceDirty</pre></a></li>
+<li class="property protected inherited"><a href="#%24sourceContent" title="$sourceContent :: "><span class="description">$sourceContent</span><pre>$sourceContent</pre></a></li>
+<li class="property protected "><a href="#%24traitAliases" title="$traitAliases :: "><span class="description">&lt;p&gt;Array of trait aliases&lt;/p&gt;</span><pre>$traitAliases</pre></a></li>
+<li class="property protected "><a href="#%24traitOverrides" title="$traitOverrides :: "><span class="description">&lt;p&gt;Array of trait overrides&lt;/p&gt;</span><pre>$traitOverrides</pre></a></li>
+<li class="property protected "><a href="#%24traits" title="$traits :: "><span class="description">&lt;p&gt;Array of trait names&lt;/p&gt;</span><pre>$traits</pre></a></li>
+<li class="property protected "><a href="#%24uses" title="$uses :: "><span class="description">&lt;p&gt;Array of string names&lt;/p&gt;</span><pre>$uses</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  inherited"><a href="#LINE_FEED" title="LINE_FEED :: Line feed to use in place of EOL"><span class="description">Line feed to use in place of EOL</span><pre>LINE_FEED</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CZend%5CCode%5CGenerator%5CTraitUsageGenerator" id="\Zend\Code\Generator\TraitUsageGenerator"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Code.html">Code</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Code.Generator.html">Generator</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Code.Generator.TraitUsageGenerator.html">TraitUsageGenerator</a>
+</li>
+</ul>
+<div href="../classes/Zend.Code.Generator.TraitUsageGenerator.html" class="element class"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct(\Zend\Code\Generator\ClassGenerator $classGenerator) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$classGenerator</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="addTrait" id="addTrait"></a><div class="element clickable method public addTrait" data-toggle="collapse" data-target=".addTrait .collapse">
+<h2>addTrait()
+        </h2>
+<pre>addTrait($trait) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherit</th>
+<td>Zend\Code\Generator\TraitUsageInterface</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$trait</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="addTraitAlias" id="addTraitAlias"></a><div class="element clickable method public addTraitAlias" data-toggle="collapse" data-target=".addTraitAlias .collapse">
+<h2>addTraitAlias()
+        </h2>
+<pre>addTraitAlias($method, $alias, $visibility) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherit</th>
+<td>Zend\Code\Generator\TraitUsageInterface</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$method</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$alias</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$visibility</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="addTraitOverride" id="addTraitOverride"></a><div class="element clickable method public addTraitOverride" data-toggle="collapse" data-target=".addTraitOverride .collapse">
+<h2>addTraitOverride()
+        </h2>
+<pre>addTraitOverride($method, $traitsToReplace) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherit</th>
+<td>Zend\Code\Generator\TraitUsageInterface</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$method</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$traitsToReplace</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="addTraits" id="addTraits"></a><div class="element clickable method public addTraits" data-toggle="collapse" data-target=".addTraits .collapse">
+<h2>addTraits()
+        </h2>
+<pre>addTraits(array $traits) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherit</th>
+<td>Zend\Code\Generator\TraitUsageInterface</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$traits</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="addUse" id="addUse"></a><div class="element clickable method public addUse" data-toggle="collapse" data-target=".addUse .collapse">
+<h2>addUse()
+        </h2>
+<pre>addUse($use, $useAlias) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherit</th>
+<td>Zend\Code\Generator\TraitUsageInterface</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$use</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$useAlias</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="generate" id="generate"></a><div class="element clickable method public generate" data-toggle="collapse" data-target=".generate .collapse">
+<h2>generate()
+        </h2>
+<pre>generate() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherit</th>
+<td>Zend\Code\Generator\GeneratorInterface</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getIndentation" id="getIndentation"></a><div class="element clickable method public getIndentation" data-toggle="collapse" data-target=".getIndentation .collapse">
+<h2>getIndentation()
+        </h2>
+<pre>getIndentation() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::getIndentation()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getSourceContent" id="getSourceContent"></a><div class="element clickable method public getSourceContent" data-toggle="collapse" data-target=".getSourceContent .collapse">
+<h2>getSourceContent()
+        </h2>
+<pre>getSourceContent() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::getSourceContent()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getTraitAliases" id="getTraitAliases"></a><div class="element clickable method public getTraitAliases" data-toggle="collapse" data-target=".getTraitAliases .collapse">
+<h2>getTraitAliases()
+        </h2>
+<pre>getTraitAliases() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherit</th>
+<td>Zend\Code\Generator\TraitUsageInterface</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getTraitOverrides" id="getTraitOverrides"></a><div class="element clickable method public getTraitOverrides" data-toggle="collapse" data-target=".getTraitOverrides .collapse">
+<h2>getTraitOverrides()
+        </h2>
+<pre>getTraitOverrides() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherit</th>
+<td>Zend\Code\Generator\TraitUsageInterface</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getTraits" id="getTraits"></a><div class="element clickable method public getTraits" data-toggle="collapse" data-target=".getTraits .collapse">
+<h2>getTraits()
+        </h2>
+<pre>getTraits() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherit</th>
+<td>Zend\Code\Generator\TraitUsageInterface</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getUses" id="getUses"></a><div class="element clickable method public getUses" data-toggle="collapse" data-target=".getUses .collapse">
+<h2>getUses()
+        </h2>
+<pre>getUses() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherit</th>
+<td>Zend\Code\Generator\TraitUsageInterface</td>
+</tr></table>
+</div></div>
+</div>
+<a name="hasTrait" id="hasTrait"></a><div class="element clickable method public hasTrait" data-toggle="collapse" data-target=".hasTrait .collapse">
+<h2>hasTrait()
+        </h2>
+<pre>hasTrait($traitName) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherit</th>
+<td>Zend\Code\Generator\TraitUsageInterface</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$traitName</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="isSourceDirty" id="isSourceDirty"></a><div class="element clickable method public isSourceDirty" data-toggle="collapse" data-target=".isSourceDirty .collapse">
+<h2>isSourceDirty()
+        </h2>
+<pre>isSourceDirty() : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::isSourceDirty()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="removeTrait" id="removeTrait"></a><div class="element clickable method public removeTrait" data-toggle="collapse" data-target=".removeTrait .collapse">
+<h2>removeTrait()
+        </h2>
+<pre>removeTrait($traitName) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherit</th>
+<td>Zend\Code\Generator\TraitUsageInterface</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$traitName</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="removeTraitOverride" id="removeTraitOverride"></a><div class="element clickable method public removeTraitOverride" data-toggle="collapse" data-target=".removeTraitOverride .collapse">
+<h2>removeTraitOverride()
+        </h2>
+<pre>removeTraitOverride($method, $overridesToRemove) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherit</th>
+<td>Zend\Code\Generator\TraitUsageInterface</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$method</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$overridesToRemove</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="setIndentation" id="setIndentation"></a><div class="element clickable method public setIndentation" data-toggle="collapse" data-target=".setIndentation .collapse">
+<h2>setIndentation()
+        </h2>
+<pre>setIndentation(string $indentation) : <a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::setIndentation()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$indentation</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></code></div>
+</div></div>
+</div>
+<a name="setOptions" id="setOptions"></a><div class="element clickable method public setOptions" data-toggle="collapse" data-target=".setOptions .collapse">
+<h2>setOptions()
+        </h2>
+<pre>setOptions(array | \Traversable $options) : <a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::setOptions()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array\Traversable</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Code.Generator.Exception.InvalidArgumentException.html">\Zend\Code\Generator\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></code></div>
+</div></div>
+</div>
+<a name="setSourceContent" id="setSourceContent"></a><div class="element clickable method public setSourceContent" data-toggle="collapse" data-target=".setSourceContent .collapse">
+<h2>setSourceContent()
+        </h2>
+<pre>setSourceContent(string $sourceContent) : <a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::setSourceContent()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sourceContent</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></code></div>
+</div></div>
+</div>
+<a name="setSourceDirty" id="setSourceDirty"></a><div class="element clickable method public setSourceDirty" data-toggle="collapse" data-target=".setSourceDirty .collapse">
+<h2>setSourceDirty()
+        </h2>
+<pre>setSourceDirty(bool $isSourceDirty) : <a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::setSourceDirty()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$isSourceDirty</h4>
+<code>bool</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Code.Generator.AbstractGenerator.html">\Zend\Code\Generator\AbstractGenerator</a></code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24classGenerator" id="$classGenerator"> </a><div class="element clickable property protected $classGenerator" data-toggle="collapse" data-target=".$classGenerator .collapse">
+<h2>$classGenerator</h2>
+<pre>$classGenerator : <a href="../classes/Zend.Code.Generator.ClassGenerator.html">\Zend\Code\Generator\ClassGenerator</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24indentation" id="$indentation"> </a><div class="element clickable property protected $indentation" data-toggle="collapse" data-target=".$indentation .collapse">
+<h2>&lt;p&gt;4 spaces by default&lt;/p&gt;</h2>
+<pre>$indentation : int | string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::$$indentation</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24isSourceDirty" id="$isSourceDirty"> </a><div class="element clickable property protected $isSourceDirty" data-toggle="collapse" data-target=".$isSourceDirty .collapse">
+<h2>$isSourceDirty</h2>
+<pre>$isSourceDirty : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::$$isSourceDirty</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24sourceContent" id="$sourceContent"> </a><div class="element clickable property protected $sourceContent" data-toggle="collapse" data-target=".$sourceContent .collapse">
+<h2>$sourceContent</h2>
+<pre>$sourceContent : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::$$sourceContent</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24traitAliases" id="$traitAliases"> </a><div class="element clickable property protected $traitAliases" data-toggle="collapse" data-target=".$traitAliases .collapse">
+<h2>&lt;p&gt;Array of trait aliases&lt;/p&gt;</h2>
+<pre>$traitAliases : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24traitOverrides" id="$traitOverrides"> </a><div class="element clickable property protected $traitOverrides" data-toggle="collapse" data-target=".$traitOverrides .collapse">
+<h2>&lt;p&gt;Array of trait overrides&lt;/p&gt;</h2>
+<pre>$traitOverrides : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24traits" id="$traits"> </a><div class="element clickable property protected $traits" data-toggle="collapse" data-target=".$traits .collapse">
+<h2>&lt;p&gt;Array of trait names&lt;/p&gt;</h2>
+<pre>$traits : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24uses" id="$uses"> </a><div class="element clickable property protected $uses" data-toggle="collapse" data-target=".$uses .collapse">
+<h2>&lt;p&gt;Array of string names&lt;/p&gt;</h2>
+<pre>$uses : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="LINE_FEED" id="LINE_FEED"> </a><div class="element clickable constant  LINE_FEED" data-toggle="collapse" data-target=".LINE_FEED .collapse">
+<h2>Line feed to use in place of EOL</h2>
+<pre>LINE_FEED </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Zend\Code\Generator\AbstractGenerator::LINE_FEED</td>
+</tr></table>
+</div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a8</a> and<br>
+            generated on 2015-06-18T09:17:58-05:00.<br></footer></div>
+</div>
+</body>
+</html>

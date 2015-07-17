@@ -1,0 +1,264 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend Framework » \Zend\Permissions\Acl\Assertion\AssertionAggregate</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">
+                        Zend Framework
+                    </a><div class="nav-collapse"><ul class="nav"><li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/ZendXml.html"><i class="icon-th"></i> ZendXml</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+</ul>
+</li></ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#addAssertion" title="addAssertion :: Stacks an assertion in aggregate"><span class="description">Stacks an assertion in aggregate</span><pre>addAssertion()</pre></a></li>
+<li class="method public "><a href="#addAssertions" title="addAssertions :: "><span class="description">addAssertions()
+        </span><pre>addAssertions()</pre></a></li>
+<li class="method public "><a href="#assert" title="assert :: Returns true if and only if the assertion conditions are met"><span class="description">Returns true if and only if the assertion conditions are met</span><pre>assert()</pre></a></li>
+<li class="method public "><a href="#clearAssertions" title="clearAssertions :: Empties assertions stack"><span class="description">Empties assertions stack</span><pre>clearAssertions()</pre></a></li>
+<li class="method public "><a href="#getAssertionManager" title="getAssertionManager :: "><span class="description">getAssertionManager()
+        </span><pre>getAssertionManager()</pre></a></li>
+<li class="method public "><a href="#getMode" title="getMode :: Return current mode"><span class="description">Return current mode</span><pre>getMode()</pre></a></li>
+<li class="method public "><a href="#setAssertionManager" title="setAssertionManager :: "><span class="description">setAssertionManager()
+        </span><pre>setAssertionManager()</pre></a></li>
+<li class="method public "><a href="#setMode" title="setMode :: Set assertion chain behavior"><span class="description">Set assertion chain behavior</span><pre>setMode()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24assertionManager" title="$assertionManager :: "><span class="description">&lt;p&gt;AssertionManager&lt;/p&gt;</span><pre>$assertionManager</pre></a></li>
+<li class="property protected "><a href="#%24assertions" title="$assertions :: "><span class="description">$assertions</span><pre>$assertions</pre></a></li>
+<li class="property protected "><a href="#%24mode" title="$mode :: "><span class="description">$mode</span><pre>$mode</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#MODE_ALL" title="MODE_ALL :: "><span class="description">MODE_ALL</span><pre>MODE_ALL</pre></a></li>
+<li class="constant  "><a href="#MODE_AT_LEAST_ONE" title="MODE_AT_LEAST_ONE :: "><span class="description">MODE_AT_LEAST_ONE</span><pre>MODE_AT_LEAST_ONE</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CZend%5CPermissions%5CAcl%5CAssertion%5CAssertionAggregate" id="\Zend\Permissions\Acl\Assertion\AssertionAggregate"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Permissions.html">Permissions</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Permissions.Acl.html">Acl</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Permissions.Acl.Assertion.html">Assertion</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Permissions.Acl.Assertion.AssertionAggregate.html">AssertionAggregate</a>
+</li>
+</ul>
+<div href="../classes/Zend.Permissions.Acl.Assertion.AssertionAggregate.html" class="element class"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="addAssertion" id="addAssertion"></a><div class="element clickable method public addAssertion" data-toggle="collapse" data-target=".addAssertion .collapse">
+<h2>Stacks an assertion in aggregate</h2>
+<pre>addAssertion(<a href="../classes/Zend.Permissions.Acl.Assertion.AssertionInterface.html">\Zend\Permissions\Acl\Assertion\AssertionInterface</a> | string $assertion) : \Zend\Permissions\Acl\Assertion\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$assertion</h4>
+<code><a href="../classes/Zend.Permissions.Acl.Assertion.AssertionInterface.html">\Zend\Permissions\Acl\Assertion\AssertionInterface</a>string</code><p>if string, must match a AssertionManager declared service (checked later)</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Permissions\Acl\Assertion\self</code></div>
+</div></div>
+</div>
+<a name="addAssertions" id="addAssertions"></a><div class="element clickable method public addAssertions" data-toggle="collapse" data-target=".addAssertions .collapse">
+<h2>addAssertions()
+        </h2>
+<pre>addAssertions(array $assertions) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$assertions</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="assert" id="assert"></a><div class="element clickable method public assert" data-toggle="collapse" data-target=".assert .collapse">
+<h2>Returns true if and only if the assertion conditions are met</h2>
+<pre>assert(\Zend\Permissions\Acl\Acl $acl, \Zend\Permissions\Acl\Role\RoleInterface $role, \Zend\Permissions\Acl\Resource\ResourceInterface $resource, string $privilege) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This method is passed the ACL, Role, Resource, and privilege to which the authorization query applies. If the
+$role, $resource, or $privilege parameters are null, it means that the query applies to all Roles, Resources, or
+privileges, respectively.</p></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\Zend\Permissions\Acl\Assertion\AssertionInterface::assert()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$acl</h4>
+<code><a href="../classes/Zend.Permissions.Acl.Acl.html">\Zend\Permissions\Acl\Acl</a></code>
+</div>
+<div class="subelement argument">
+<h4>$role</h4>
+<code><a href="../classes/Zend.Permissions.Acl.Role.RoleInterface.html">\Zend\Permissions\Acl\Role\RoleInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$resource</h4>
+<code><a href="../classes/Zend.Permissions.Acl.Resource.ResourceInterface.html">\Zend\Permissions\Acl\Resource\ResourceInterface</a></code>
+</div>
+<div class="subelement argument">
+<h4>$privilege</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Permissions.Acl.Exception.RuntimeException.html">\Zend\Permissions\Acl\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="clearAssertions" id="clearAssertions"></a><div class="element clickable method public clearAssertions" data-toggle="collapse" data-target=".clearAssertions .collapse">
+<h2>Empties assertions stack</h2>
+<pre>clearAssertions() : \Zend\Permissions\Acl\Assertion\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Permissions\Acl\Assertion\self</code></div>
+</div></div>
+</div>
+<a name="getAssertionManager" id="getAssertionManager"></a><div class="element clickable method public getAssertionManager" data-toggle="collapse" data-target=".getAssertionManager .collapse">
+<h2>getAssertionManager()
+        </h2>
+<pre>getAssertionManager() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="getMode" id="getMode"></a><div class="element clickable method public getMode" data-toggle="collapse" data-target=".getMode .collapse">
+<h2>Return current mode</h2>
+<pre>getMode() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="setAssertionManager" id="setAssertionManager"></a><div class="element clickable method public setAssertionManager" data-toggle="collapse" data-target=".setAssertionManager .collapse">
+<h2>setAssertionManager()
+        </h2>
+<pre>setAssertionManager(\Zend\Permissions\Acl\Assertion\AssertionManager $manager) : \Zend\Permissions\Acl\Assertion\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$manager</h4>
+<code><a href="../classes/Zend.Permissions.Acl.Assertion.AssertionManager.html">\Zend\Permissions\Acl\Assertion\AssertionManager</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Permissions\Acl\Assertion\self</code></div>
+</div></div>
+</div>
+<a name="setMode" id="setMode"></a><div class="element clickable method public setMode" data-toggle="collapse" data-target=".setMode .collapse">
+<h2>Set assertion chain behavior</h2>
+<pre>setMode(string $mode) : \Zend\Permissions\Acl\Assertion\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>AssertionAggregate should assert to true when:</p>
+
+<ul>
+<li>all assertions are true with MODE_ALL</li>
+<li>at least one assertion is true with MODE_AT_LEAST_ONE</li>
+</ul></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mode</h4>
+<code>string</code><p>indicates how assertion chain result should interpreted (either 'all' or 'at_least_one')</p>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Permissions.Acl.Exception.InvalidArgumentException.html">\Zend\Permissions\Acl\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Permissions\Acl\Assertion\self</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24assertionManager" id="$assertionManager"> </a><div class="element clickable property protected $assertionManager" data-toggle="collapse" data-target=".$assertionManager .collapse">
+<h2>&lt;p&gt;AssertionManager&lt;/p&gt;</h2>
+<pre>$assertionManager : \Zend\Permissions\Acl\Assertion\$manager</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24assertions" id="$assertions"> </a><div class="element clickable property protected $assertions" data-toggle="collapse" data-target=".$assertions .collapse">
+<h2>$assertions</h2>
+<pre>$assertions </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24mode" id="$mode"> </a><div class="element clickable property protected $mode" data-toggle="collapse" data-target=".$mode .collapse">
+<h2>$mode</h2>
+<pre>$mode </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="MODE_ALL" id="MODE_ALL"> </a><div class="element clickable constant  MODE_ALL" data-toggle="collapse" data-target=".MODE_ALL .collapse">
+<h2>MODE_ALL</h2>
+<pre>MODE_ALL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="MODE_AT_LEAST_ONE" id="MODE_AT_LEAST_ONE"> </a><div class="element clickable constant  MODE_AT_LEAST_ONE" data-toggle="collapse" data-target=".MODE_AT_LEAST_ONE .collapse">
+<h2>MODE_AT_LEAST_ONE</h2>
+<pre>MODE_AT_LEAST_ONE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a8</a> and<br>
+            generated on 2015-06-18T09:20:56-05:00.<br></footer></div>
+</div>
+</body>
+</html>

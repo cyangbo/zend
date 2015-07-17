@@ -1,0 +1,585 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend Framework » \Zend\Cache\Storage\Adapter\RedisResourceManager</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">
+                        Zend Framework
+                    </a><div class="nav-collapse"><ul class="nav"><li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/ZendXml.html"><i class="icon-th"></i> ZendXml</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+</ul>
+</li></ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#getDatabase" title="getDatabase :: Get redis resource database"><span class="description">Get redis resource database</span><pre>getDatabase()</pre></a></li>
+<li class="method public "><a href="#getLibOption" title="getLibOption :: Get one Redis option"><span class="description">Get one Redis option</span><pre>getLibOption()</pre></a></li>
+<li class="method public "><a href="#getLibOptions" title="getLibOptions :: Get Redis options"><span class="description">Get Redis options</span><pre>getLibOptions()</pre></a></li>
+<li class="method public "><a href="#getMajorVersion" title="getMajorVersion :: Get redis server version"><span class="description">Get redis server version</span><pre>getMajorVersion()</pre></a></li>
+<li class="method public "><a href="#getMayorVersion" title="getMayorVersion :: Get redis server version"><span class="description">Get redis server version</span><pre>getMayorVersion()</pre></a></li>
+<li class="method public "><a href="#getPassword" title="getPassword :: Get redis resource password"><span class="description">Get redis resource password</span><pre>getPassword()</pre></a></li>
+<li class="method public "><a href="#getPersistentId" title="getPersistentId :: Get the persistent id"><span class="description">Get the persistent id</span><pre>getPersistentId()</pre></a></li>
+<li class="method public "><a href="#getResource" title="getResource :: Gets a redis resource"><span class="description">Gets a redis resource</span><pre>getResource()</pre></a></li>
+<li class="method public "><a href="#getServer" title="getServer :: Get server"><span class="description">Get server</span><pre>getServer()</pre></a></li>
+<li class="method public "><a href="#hasResource" title="hasResource :: Check if a resource exists"><span class="description">Check if a resource exists</span><pre>hasResource()</pre></a></li>
+<li class="method public "><a href="#removeResource" title="removeResource :: Remove a resource"><span class="description">Remove a resource</span><pre>removeResource()</pre></a></li>
+<li class="method public "><a href="#setDatabase" title="setDatabase :: Set redis database number"><span class="description">Set redis database number</span><pre>setDatabase()</pre></a></li>
+<li class="method public "><a href="#setLibOption" title="setLibOption :: Set one Redis option"><span class="description">Set one Redis option</span><pre>setLibOption()</pre></a></li>
+<li class="method public "><a href="#setLibOptions" title="setLibOptions :: Set Redis options"><span class="description">Set Redis options</span><pre>setLibOptions()</pre></a></li>
+<li class="method public "><a href="#setPassword" title="setPassword :: Set redis password"><span class="description">Set redis password</span><pre>setPassword()</pre></a></li>
+<li class="method public "><a href="#setPersistentId" title="setPersistentId :: Set the persistent id"><span class="description">Set the persistent id</span><pre>setPersistentId()</pre></a></li>
+<li class="method public "><a href="#setResource" title="setResource :: Set a resource"><span class="description">Set a resource</span><pre>setResource()</pre></a></li>
+<li class="method public "><a href="#setServer" title="setServer :: Set server"><span class="description">Set server</span><pre>setServer()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#connect" title="connect :: Connects to redis server"><span class="description">Connects to redis server</span><pre>connect()</pre></a></li>
+<li class="method protected "><a href="#extractPassword" title="extractPassword :: Extract password to be used on connection"><span class="description">Extract password to be used on connection</span><pre>extractPassword()</pre></a></li>
+<li class="method protected "><a href="#normalizeLibOptionKey" title="normalizeLibOptionKey :: Convert option name into it's constant value"><span class="description">Convert option name into it's constant value</span><pre>normalizeLibOptionKey()</pre></a></li>
+<li class="method protected "><a href="#normalizeLibOptions" title="normalizeLibOptions :: Normalize Redis options"><span class="description">Normalize Redis options</span><pre>normalizeLibOptions()</pre></a></li>
+<li class="method protected "><a href="#normalizePersistentId" title="normalizePersistentId :: Normalize the persistent id"><span class="description">Normalize the persistent id</span><pre>normalizePersistentId()</pre></a></li>
+<li class="method protected "><a href="#normalizeServer" title="normalizeServer :: Normalize one server into the following format:
+array('host' =&gt; &lt;host&gt;[, 'port' =&gt; &lt;port&gt;[, 'timeout' =&gt; &lt;timeout&gt;]])"><span class="description">Normalize one server into the following format:
+array('host' =&gt; &lt;host&gt;[, 'port' =&gt; &lt;port&gt;[, 'timeout' =&gt; &lt;timeout&gt;]])</span><pre>normalizeServer()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24resources" title="$resources :: Registered resources"><span class="description">Registered resources</span><pre>$resources</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CZend%5CCache%5CStorage%5CAdapter%5CRedisResourceManager" id="\Zend\Cache\Storage\Adapter\RedisResourceManager"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Cache.html">Cache</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Cache.Storage.html">Storage</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Cache.Storage.Adapter.html">Adapter</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">RedisResourceManager</a>
+</li>
+</ul>
+<div href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html" class="element class">
+<p class="short_description">This is a resource manager for redis</p>
+<div class="details">
+<p class="long_description"></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="getDatabase" id="getDatabase"></a><div class="element clickable method public getDatabase" data-toggle="collapse" data-target=".getDatabase .collapse">
+<h2>Get redis resource database</h2>
+<pre>getDatabase(string $id) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getLibOption" id="getLibOption"></a><div class="element clickable method public getLibOption" data-toggle="collapse" data-target=".getLibOption .collapse">
+<h2>Get one Redis option</h2>
+<pre>getLibOption(string $id, string | int $key) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>stringint</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Cache.Exception.RuntimeException.html">\Zend\Cache\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="getLibOptions" id="getLibOptions"></a><div class="element clickable method public getLibOptions" data-toggle="collapse" data-target=".getLibOptions .collapse">
+<h2>Get Redis options</h2>
+<pre>getLibOptions(string $id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Cache.Exception.RuntimeException.html">\Zend\Cache\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getMajorVersion" id="getMajorVersion"></a><div class="element clickable method public getMajorVersion" data-toggle="collapse" data-target=".getMajorVersion .collapse">
+<h2>Get redis server version</h2>
+<pre>getMajorVersion(string $id) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Cache.Exception.RuntimeException.html">\Zend\Cache\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a name="getMayorVersion" id="getMayorVersion"></a><div class="element clickable method public getMayorVersion" data-toggle="collapse" data-target=".getMayorVersion .collapse">
+<h2>Get redis server version</h2>
+<pre>getMayorVersion(string $id) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>deprecated</th>
+<td>2.2.2 Use getMajorVersion instead</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Cache.Exception.RuntimeException.html">\Zend\Cache\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a name="getPassword" id="getPassword"></a><div class="element clickable method public getPassword" data-toggle="collapse" data-target=".getPassword .collapse">
+<h2>Get redis resource password</h2>
+<pre>getPassword(string $id) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getPersistentId" id="getPersistentId"></a><div class="element clickable method public getPersistentId" data-toggle="collapse" data-target=".getPersistentId .collapse">
+<h2>Get the persistent id</h2>
+<pre>getPersistentId(string $id) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Cache.Exception.RuntimeException.html">\Zend\Cache\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getResource" id="getResource"></a><div class="element clickable method public getResource" data-toggle="collapse" data-target=".getResource .collapse">
+<h2>Gets a redis resource</h2>
+<pre>getResource(string $id) : <a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Cache.Exception.RuntimeException.html">\Zend\Cache\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></code></div>
+</div></div>
+</div>
+<a name="getServer" id="getServer"></a><div class="element clickable method public getServer" data-toggle="collapse" data-target=".getServer .collapse">
+<h2>Get server</h2>
+<pre>getServer(string $id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Cache.Exception.RuntimeException.html">\Zend\Cache\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>array('host' => <host>[, 'port' => <port>[, 'timeout' => <timeout>]])</div>
+</div></div>
+</div>
+<a name="hasResource" id="hasResource"></a><div class="element clickable method public hasResource" data-toggle="collapse" data-target=".hasResource .collapse">
+<h2>Check if a resource exists</h2>
+<pre>hasResource(string $id) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="removeResource" id="removeResource"></a><div class="element clickable method public removeResource" data-toggle="collapse" data-target=".removeResource .collapse">
+<h2>Remove a resource</h2>
+<pre>removeResource(string $id) : <a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></code>Fluent interface</div>
+</div></div>
+</div>
+<a name="setDatabase" id="setDatabase"></a><div class="element clickable method public setDatabase" data-toggle="collapse" data-target=".setDatabase .collapse">
+<h2>Set redis database number</h2>
+<pre>setDatabase(string $id, int $database) : <a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$database</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></code></div>
+</div></div>
+</div>
+<a name="setLibOption" id="setLibOption"></a><div class="element clickable method public setLibOption" data-toggle="collapse" data-target=".setLibOption .collapse">
+<h2>Set one Redis option</h2>
+<pre>setLibOption(string $id, string | int $key, mixed $value) : <a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>stringint</code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></code>Fluent interface</div>
+</div></div>
+</div>
+<a name="setLibOptions" id="setLibOptions"></a><div class="element clickable method public setLibOptions" data-toggle="collapse" data-target=".setLibOptions .collapse">
+<h2>Set Redis options</h2>
+<pre>setLibOptions(string $id, array $libOptions) : <a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$libOptions</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></code>Fluent interface</div>
+</div></div>
+</div>
+<a name="setPassword" id="setPassword"></a><div class="element clickable method public setPassword" data-toggle="collapse" data-target=".setPassword .collapse">
+<h2>Set redis password</h2>
+<pre>setPassword(string $id, string $password) : <a href="http://php.net/manual/en/class.redis.php">\Redis</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$password</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="http://php.net/manual/en/class.redis.php">\Redis</a></code></div>
+</div></div>
+</div>
+<a name="setPersistentId" id="setPersistentId"></a><div class="element clickable method public setPersistentId" data-toggle="collapse" data-target=".setPersistentId .collapse">
+<h2>Set the persistent id</h2>
+<pre>setPersistentId(string $id, string $persistentId) : <a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$persistentId</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Cache.Exception.RuntimeException.html">\Zend\Cache\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></code>Fluent interface</div>
+</div></div>
+</div>
+<a name="setResource" id="setResource"></a><div class="element clickable method public setResource" data-toggle="collapse" data-target=".setResource .collapse">
+<h2>Set a resource</h2>
+<pre>setResource(string $id, array | \Traversable | <a href="http://php.net/manual/en/class.redis.php">\Redis</a> $resource) : <a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$resource</h4>
+<code>array\Traversable<a href="http://php.net/manual/en/class.redis.php">\Redis</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></code>Fluent interface</div>
+</div></div>
+</div>
+<a name="setServer" id="setServer"></a><div class="element clickable method public setServer" data-toggle="collapse" data-target=".setServer .collapse">
+<h2>Set server</h2>
+<pre>setServer(string $id, string | array $server) : <a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Server can be described as follows:
+- URI:   /path/to/sock.sock
+- Assoc: array('host' => <host>[, 'port' => <port>[, 'timeout' => <timeout>]])
+- List:  array(<host>[, <port>, [, <timeout>]])</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$server</h4>
+<code>stringarray</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Cache.Storage.Adapter.RedisResourceManager.html">\Zend\Cache\Storage\Adapter\RedisResourceManager</a></code></div>
+</div></div>
+</div>
+<a name="connect" id="connect"></a><div class="element clickable method protected connect" data-toggle="collapse" data-target=".connect .collapse">
+<h2>Connects to redis server</h2>
+<pre>connect(array $resource) : null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$resource</h4>
+<code>array</code><p>& $resource</p>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Cache.Exception.RuntimeException.html">\Zend\Cache\Exception\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>null</code></div>
+</div></div>
+</div>
+<a name="extractPassword" id="extractPassword"></a><div class="element clickable method protected extractPassword" data-toggle="collapse" data-target=".extractPassword .collapse">
+<h2>Extract password to be used on connection</h2>
+<pre>extractPassword(mixed $resource, mixed $serverUri) : string | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$resource</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$serverUri</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>
+</div>
+</div></div>
+</div>
+<a name="normalizeLibOptionKey" id="normalizeLibOptionKey"></a><div class="element clickable method protected normalizeLibOptionKey" data-toggle="collapse" data-target=".normalizeLibOptionKey .collapse">
+<h2>Convert option name into it's constant value</h2>
+<pre>normalizeLibOptionKey(string | int $key) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>stringint</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Cache.Exception.InvalidArgumentException.html">\Zend\Cache\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a name="normalizeLibOptions" id="normalizeLibOptions"></a><div class="element clickable method protected normalizeLibOptions" data-toggle="collapse" data-target=".normalizeLibOptions .collapse">
+<h2>Normalize Redis options</h2>
+<pre>normalizeLibOptions(array | \Traversable $libOptions) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$libOptions</h4>
+<code>array\Traversable</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Cache.Exception.InvalidArgumentException.html">\Zend\Cache\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a name="normalizePersistentId" id="normalizePersistentId"></a><div class="element clickable method protected normalizePersistentId" data-toggle="collapse" data-target=".normalizePersistentId .collapse">
+<h2>Normalize the persistent id</h2>
+<pre>normalizePersistentId(string $persistentId) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$persistentId</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a name="normalizeServer" id="normalizeServer"></a><div class="element clickable method protected normalizeServer" data-toggle="collapse" data-target=".normalizeServer .collapse">
+<h2>Normalize one server into the following format:
+array('host' =&gt; &lt;host&gt;[, 'port' =&gt; &lt;port&gt;[, 'timeout' =&gt; &lt;timeout&gt;]])</h2>
+<pre>normalizeServer(string | array $server) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$server</h4>
+<code>stringarray</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Cache.Exception.InvalidArgumentException.html">\Zend\Cache\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24resources" id="$resources"> </a><div class="element clickable property protected $resources" data-toggle="collapse" data-target=".$resources .collapse">
+<h2>Registered resources</h2>
+<pre>$resources : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a8</a> and<br>
+            generated on 2015-06-18T09:21:15-05:00.<br></footer></div>
+</div>
+</body>
+</html>

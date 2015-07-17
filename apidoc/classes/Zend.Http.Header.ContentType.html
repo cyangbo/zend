@@ -1,0 +1,395 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend Framework » \Zend\Http\Header\ContentType</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">
+                        Zend Framework
+                    </a><div class="nav-collapse"><ul class="nav"><li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/ZendXml.html"><i class="icon-th"></i> ZendXml</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+</ul>
+</li></ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#fromString" title="fromString :: Factory method: create an object from a string representation"><span class="description">Factory method: create an object from a string representation</span><pre>fromString()</pre></a></li>
+<li class="method public "><a href="#getCharset" title="getCharset :: Get the content-type character set encoding, if any"><span class="description">Get the content-type character set encoding, if any</span><pre>getCharset()</pre></a></li>
+<li class="method public "><a href="#getFieldName" title="getFieldName :: Get the field name"><span class="description">Get the field name</span><pre>getFieldName()</pre></a></li>
+<li class="method public "><a href="#getFieldValue" title="getFieldValue :: Get the field value"><span class="description">Get the field value</span><pre>getFieldValue()</pre></a></li>
+<li class="method public "><a href="#getMediaType" title="getMediaType :: Get the media type"><span class="description">Get the media type</span><pre>getMediaType()</pre></a></li>
+<li class="method public "><a href="#getParameters" title="getParameters :: Get any additional content-type parameters currently set"><span class="description">Get any additional content-type parameters currently set</span><pre>getParameters()</pre></a></li>
+<li class="method public "><a href="#match" title="match :: Determine if the mediatype value in this header matches the provided criteria"><span class="description">Determine if the mediatype value in this header matches the provided criteria</span><pre>match()</pre></a></li>
+<li class="method public "><a href="#setCharset" title="setCharset :: Set the content-type character set encoding"><span class="description">Set the content-type character set encoding</span><pre>setCharset()</pre></a></li>
+<li class="method public "><a href="#setMediaType" title="setMediaType :: Set the media type"><span class="description">Set the media type</span><pre>setMediaType()</pre></a></li>
+<li class="method public "><a href="#setParameters" title="setParameters :: Set additional content-type parameters"><span class="description">Set additional content-type parameters</span><pre>setParameters()</pre></a></li>
+<li class="method public "><a href="#toString" title="toString :: Create a string representation of the header"><span class="description">Create a string representation of the header</span><pre>toString()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#assembleValue" title="assembleValue :: Assemble the value based on the media type and any available parameters"><span class="description">Assemble the value based on the media type and any available parameters</span><pre>assembleValue()</pre></a></li>
+<li class="method protected "><a href="#getMediaTypeObjectFromString" title="getMediaTypeObjectFromString :: Split a mediatype string into an object with the following parts:"><span class="description">Split a mediatype string into an object with the following parts:</span><pre>getMediaTypeObjectFromString()</pre></a></li>
+<li class="method protected "><a href="#splitMediaTypesFromString" title="splitMediaTypesFromString :: Split comma-separated media types into an array"><span class="description">Split comma-separated media types into an array</span><pre>splitMediaTypesFromString()</pre></a></li>
+<li class="method protected "><a href="#validateFormat" title="validateFormat :: Validate the format"><span class="description">Validate the format</span><pre>validateFormat()</pre></a></li>
+<li class="method protected "><a href="#validatePartialWildcard" title="validatePartialWildcard :: Validate a partial wildcard (i.e., string ending in '*')"><span class="description">Validate a partial wildcard (i.e., string ending in '*')</span><pre>validatePartialWildcard()</pre></a></li>
+<li class="method protected "><a href="#validateSubtype" title="validateSubtype :: Validate a subtype"><span class="description">Validate a subtype</span><pre>validateSubtype()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24mediaType" title="$mediaType :: "><span class="description">$mediaType</span><pre>$mediaType</pre></a></li>
+<li class="property protected "><a href="#%24parameters" title="$parameters :: "><span class="description">$parameters</span><pre>$parameters</pre></a></li>
+<li class="property protected "><a href="#%24value" title="$value :: "><span class="description">$value</span><pre>$value</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CZend%5CHttp%5CHeader%5CContentType" id="\Zend\Http\Header\ContentType"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Http.html">Http</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Http.Header.html">Header</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Http.Header.ContentType.html">ContentType</a>
+</li>
+</ul>
+<div href="../classes/Zend.Http.Header.ContentType.html" class="element class">
+<p class="short_description"></p>
+<div class="details">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="../classes/Zend.Http.Header.Exception.InvalidArgumentException.html">\Zend\Http\Header\Exception\InvalidArgumentException</a></code></th>
+<td></td>
+</tr>
+<tr>
+<th>see</th>
+<td>\Zend\Http\Header\http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($value, $mediaType) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$mediaType</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="fromString" id="fromString"></a><div class="element clickable method public fromString" data-toggle="collapse" data-target=".fromString .collapse">
+<h2>Factory method: create an object from a string representation</h2>
+<pre>fromString(string $headerLine) : \Zend\Http\Header\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$headerLine</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Http.Header.Exception.InvalidArgumentException.html">\Zend\Http\Header\Exception\InvalidArgumentException</a></code></th>
+<td>If the header does not match RFC 2616 definition.</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Http\Header\self</code></div>
+</div></div>
+</div>
+<a name="getCharset" id="getCharset"></a><div class="element clickable method public getCharset" data-toggle="collapse" data-target=".getCharset .collapse">
+<h2>Get the content-type character set encoding, if any</h2>
+<pre>getCharset() : null | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code><code>string</code>
+</div>
+</div></div>
+</div>
+<a name="getFieldName" id="getFieldName"></a><div class="element clickable method public getFieldName" data-toggle="collapse" data-target=".getFieldName .collapse">
+<h2>Get the field name</h2>
+<pre>getFieldName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getFieldValue" id="getFieldValue"></a><div class="element clickable method public getFieldValue" data-toggle="collapse" data-target=".getFieldValue .collapse">
+<h2>Get the field value</h2>
+<pre>getFieldValue() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getMediaType" id="getMediaType"></a><div class="element clickable method public getMediaType" data-toggle="collapse" data-target=".getMediaType .collapse">
+<h2>Get the media type</h2>
+<pre>getMediaType() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getParameters" id="getParameters"></a><div class="element clickable method public getParameters" data-toggle="collapse" data-target=".getParameters .collapse">
+<h2>Get any additional content-type parameters currently set</h2>
+<pre>getParameters() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="match" id="match"></a><div class="element clickable method public match" data-toggle="collapse" data-target=".match .collapse">
+<h2>Determine if the mediatype value in this header matches the provided criteria</h2>
+<pre>match(array | string $matchAgainst) : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$matchAgainst</h4>
+<code>arraystring</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>Matched value or false</div>
+</div></div>
+</div>
+<a name="setCharset" id="setCharset"></a><div class="element clickable method public setCharset" data-toggle="collapse" data-target=".setCharset .collapse">
+<h2>Set the content-type character set encoding</h2>
+<pre>setCharset(string $charset) : \Zend\Http\Header\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$charset</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Http\Header\self</code></div>
+</div></div>
+</div>
+<a name="setMediaType" id="setMediaType"></a><div class="element clickable method public setMediaType" data-toggle="collapse" data-target=".setMediaType .collapse">
+<h2>Set the media type</h2>
+<pre>setMediaType(string $mediaType) : \Zend\Http\Header\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mediaType</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Http\Header\self</code></div>
+</div></div>
+</div>
+<a name="setParameters" id="setParameters"></a><div class="element clickable method public setParameters" data-toggle="collapse" data-target=".setParameters .collapse">
+<h2>Set additional content-type parameters</h2>
+<pre>setParameters(array $parameters) : \Zend\Http\Header\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$parameters</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Http\Header\self</code></div>
+</div></div>
+</div>
+<a name="toString" id="toString"></a><div class="element clickable method public toString" data-toggle="collapse" data-target=".toString .collapse">
+<h2>Create a string representation of the header</h2>
+<pre>toString() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Returns in form of "NAME: VALUE"</p></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="assembleValue" id="assembleValue"></a><div class="element clickable method protected assembleValue" data-toggle="collapse" data-target=".assembleValue .collapse">
+<h2>Assemble the value based on the media type and any available parameters</h2>
+<pre>assembleValue() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getMediaTypeObjectFromString" id="getMediaTypeObjectFromString"></a><div class="element clickable method protected getMediaTypeObjectFromString" data-toggle="collapse" data-target=".getMediaTypeObjectFromString .collapse">
+<h2>Split a mediatype string into an object with the following parts:</h2>
+<pre>getMediaTypeObjectFromString(string $string) : <a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><ul>
+<li>type</li>
+<li>subtype</li>
+<li>format</li>
+</ul></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a></code></div>
+</div></div>
+</div>
+<a name="splitMediaTypesFromString" id="splitMediaTypesFromString"></a><div class="element clickable method protected splitMediaTypesFromString" data-toggle="collapse" data-target=".splitMediaTypesFromString .collapse">
+<h2>Split comma-separated media types into an array</h2>
+<pre>splitMediaTypesFromString(string $criteria) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$criteria</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="validateFormat" id="validateFormat"></a><div class="element clickable method protected validateFormat" data-toggle="collapse" data-target=".validateFormat .collapse">
+<h2>Validate the format</h2>
+<pre>validateFormat(string $right, string $left) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Validate that the right side format matches what the left side defines.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$right</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$left</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="validatePartialWildcard" id="validatePartialWildcard"></a><div class="element clickable method protected validatePartialWildcard" data-toggle="collapse" data-target=".validatePartialWildcard .collapse">
+<h2>Validate a partial wildcard (i.e., string ending in '*')</h2>
+<pre>validatePartialWildcard(string $right, string $left) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$right</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$left</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="validateSubtype" id="validateSubtype"></a><div class="element clickable method protected validateSubtype" data-toggle="collapse" data-target=".validateSubtype .collapse">
+<h2>Validate a subtype</h2>
+<pre>validateSubtype(<a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a> $right, <a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a> $left) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$right</h4>
+<code><a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a></code>
+</div>
+<div class="subelement argument">
+<h4>$left</h4>
+<code><a href="http://php.net/manual/en/class.stdclass.php">\stdClass</a></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24mediaType" id="$mediaType"> </a><div class="element clickable property protected $mediaType" data-toggle="collapse" data-target=".$mediaType .collapse">
+<h2>$mediaType</h2>
+<pre>$mediaType : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24parameters" id="$parameters"> </a><div class="element clickable property protected $parameters" data-toggle="collapse" data-target=".$parameters .collapse">
+<h2>$parameters</h2>
+<pre>$parameters : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24value" id="$value"> </a><div class="element clickable property protected $value" data-toggle="collapse" data-target=".$value .collapse">
+<h2>$value</h2>
+<pre>$value : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a8</a> and<br>
+            generated on 2015-06-18T09:13:51-05:00.<br></footer></div>
+</div>
+</body>
+</html>

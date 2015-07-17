@@ -1,0 +1,900 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend Framework » Zend\Stdlib</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">
+                        Zend Framework
+                    </a><div class="nav-collapse"><ul class="nav"><li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/ZendXml.html"><i class="icon-th"></i> ZendXml</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+</ul>
+</li></ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Namespaces</li>
+<li>
+<a href="../namespaces/Zend.Stdlib.html" title="Stdlib"><i class="icon-th"></i>Stdlib</a><ul class="nav nav-list nav-namespaces">
+<li>
+<a href="../namespaces/Zend.Stdlib.ArrayUtils.html" title="ArrayUtils"><i class="icon-th"></i>ArrayUtils</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Zend.Stdlib.Exception.html" title="Exception"><i class="icon-th"></i>Exception</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Zend.Stdlib.Extractor.html" title="Extractor"><i class="icon-th"></i>Extractor</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Zend.Stdlib.Guard.html" title="Guard"><i class="icon-th"></i>Guard</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Zend.Stdlib.Hydrator.html" title="Hydrator"><i class="icon-th"></i>Hydrator</a><ul class="nav nav-list nav-namespaces">
+<li>
+<a href="../namespaces/Zend.Stdlib.Hydrator.Aggregate.html" title="Aggregate"><i class="icon-th"></i>Aggregate</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Zend.Stdlib.Hydrator.Filter.html" title="Filter"><i class="icon-th"></i>Filter</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Zend.Stdlib.Hydrator.NamingStrategy.html" title="NamingStrategy"><i class="icon-th"></i>NamingStrategy</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Zend.Stdlib.Hydrator.Strategy.html" title="Strategy"><i class="icon-th"></i>Strategy</a><ul class="nav nav-list nav-namespaces"><li>
+<a href="../namespaces/Zend.Stdlib.Hydrator.Strategy.Exception.html" title="Exception"><i class="icon-th"></i>Exception</a><ul class="nav nav-list nav-namespaces"></ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="../namespaces/Zend.Stdlib.JsonSerializable.html" title="JsonSerializable"><i class="icon-th"></i>JsonSerializable</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/Zend.Stdlib.StringWrapper.html" title="StringWrapper"><i class="icon-th"></i>StringWrapper</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8 namespace-contents">
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/Zend.Stdlib.html">Stdlib</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="ArraySerializableInterface" id="ArraySerializableInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.ArraySerializableInterface.html">
+<h1>ArraySerializableInterface<a href="../classes/Zend.Stdlib.ArraySerializableInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.ArraySerializableInterface.html" class="more">« More »</a>
+</div>
+<a name="DispatchableInterface" id="DispatchableInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.DispatchableInterface.html">
+<h1>DispatchableInterface<a href="../classes/Zend.Stdlib.DispatchableInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.DispatchableInterface.html" class="more">« More »</a>
+</div>
+<a name="InitializableInterface" id="InitializableInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.InitializableInterface.html">
+<h1>InitializableInterface<a href="../classes/Zend.Stdlib.InitializableInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface to allow objects to have initialization logic</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.InitializableInterface.html" class="more">« More »</a>
+</div>
+<a name="JsonSerializable" id="JsonSerializable"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.JsonSerializable.html">
+<h1>JsonSerializable<a href="../classes/Zend.Stdlib.JsonSerializable.html">¶</a>
+</h1>
+<p class="short_description">Polyfill for JsonSerializable</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.JsonSerializable.html" class="more">« More »</a>
+</div>
+<a name="MessageInterface" id="MessageInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.MessageInterface.html">
+<h1>MessageInterface<a href="../classes/Zend.Stdlib.MessageInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.MessageInterface.html" class="more">« More »</a>
+</div>
+<a name="ParameterObjectInterface" id="ParameterObjectInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.ParameterObjectInterface.html">
+<h1>ParameterObjectInterface<a href="../classes/Zend.Stdlib.ParameterObjectInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.ParameterObjectInterface.html" class="more">« More »</a>
+</div>
+<a name="ParametersInterface" id="ParametersInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.ParametersInterface.html">
+<h1>ParametersInterface<a href="../classes/Zend.Stdlib.ParametersInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.ParametersInterface.html" class="more">« More »</a>
+</div>
+<a name="RequestInterface" id="RequestInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.RequestInterface.html">
+<h1>RequestInterface<a href="../classes/Zend.Stdlib.RequestInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.RequestInterface.html" class="more">« More »</a>
+</div>
+<a name="ResponseInterface" id="ResponseInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.ResponseInterface.html">
+<h1>ResponseInterface<a href="../classes/Zend.Stdlib.ResponseInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.ResponseInterface.html" class="more">« More »</a>
+</div>
+<a name="AbstractOptions" id="AbstractOptions"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.AbstractOptions.html">
+<h1>AbstractOptions<a href="../classes/Zend.Stdlib.AbstractOptions.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.AbstractOptions.html" class="more">« More »</a>
+</div>
+<a name="ArrayObject" id="ArrayObject"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.ArrayObject.html">
+<h1>ArrayObject<a href="../classes/Zend.Stdlib.ArrayObject.html">¶</a>
+</h1>
+<p class="short_description">Custom framework ArrayObject implementation</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.ArrayObject.html" class="more">« More »</a>
+</div>
+<a name="ArrayStack" id="ArrayStack"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.ArrayStack.html">
+<h1>ArrayStack<a href="../classes/Zend.Stdlib.ArrayStack.html">¶</a>
+</h1>
+<p class="short_description">ArrayObject that acts as a stack with regards to iteration</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.ArrayStack.html" class="more">« More »</a>
+</div>
+<a name="ArrayUtils" id="ArrayUtils"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.ArrayUtils.html">
+<h1>ArrayUtils<a href="../classes/Zend.Stdlib.ArrayUtils.html">¶</a>
+</h1>
+<p class="short_description">Utility class for testing and manipulation of PHP arrays.</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.ArrayUtils.html" class="more">« More »</a>
+</div>
+<a name="CallbackHandler" id="CallbackHandler"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.CallbackHandler.html">
+<h1>CallbackHandler<a href="../classes/Zend.Stdlib.CallbackHandler.html">¶</a>
+</h1>
+<p class="short_description">CallbackHandler</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.CallbackHandler.html" class="more">« More »</a>
+</div>
+<a name="DateTime" id="DateTime"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.DateTime.html">
+<h1>DateTime<a href="../classes/Zend.Stdlib.DateTime.html">¶</a>
+</h1>
+<p class="short_description">DateTime</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.DateTime.html" class="more">« More »</a>
+</div>
+<a name="ErrorHandler" id="ErrorHandler"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.ErrorHandler.html">
+<h1>ErrorHandler<a href="../classes/Zend.Stdlib.ErrorHandler.html">¶</a>
+</h1>
+<p class="short_description">ErrorHandler that can be used to catch internal PHP errors
+and convert to an ErrorException instance.</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.ErrorHandler.html" class="more">« More »</a>
+</div>
+<a name="Glob" id="Glob"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Glob.html">
+<h1>Glob<a href="../classes/Zend.Stdlib.Glob.html">¶</a>
+</h1>
+<p class="short_description">Wrapper for glob with fallback if GLOB_BRACE is not available.</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Glob.html" class="more">« More »</a>
+</div>
+<a name="Message" id="Message"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Message.html">
+<h1>Message<a href="../classes/Zend.Stdlib.Message.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Message.html" class="more">« More »</a>
+</div>
+<a name="Parameters" id="Parameters"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Parameters.html">
+<h1>Parameters<a href="../classes/Zend.Stdlib.Parameters.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Parameters.html" class="more">« More »</a>
+</div>
+<a name="PriorityList" id="PriorityList"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.PriorityList.html">
+<h1>PriorityList<a href="../classes/Zend.Stdlib.PriorityList.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.PriorityList.html" class="more">« More »</a>
+</div>
+<a name="PriorityQueue" id="PriorityQueue"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.PriorityQueue.html">
+<h1>PriorityQueue<a href="../classes/Zend.Stdlib.PriorityQueue.html">¶</a>
+</h1>
+<p class="short_description">Re-usable, serializable priority queue implementation</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.PriorityQueue.html" class="more">« More »</a>
+</div>
+<a name="Request" id="Request"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Request.html">
+<h1>Request<a href="../classes/Zend.Stdlib.Request.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Request.html" class="more">« More »</a>
+</div>
+<a name="Response" id="Response"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Response.html">
+<h1>Response<a href="../classes/Zend.Stdlib.Response.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Response.html" class="more">« More »</a>
+</div>
+<a name="SplPriorityQueue" id="SplPriorityQueue"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.SplPriorityQueue.html">
+<h1>SplPriorityQueue<a href="../classes/Zend.Stdlib.SplPriorityQueue.html">¶</a>
+</h1>
+<p class="short_description">Serializable version of SplPriorityQueue</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.SplPriorityQueue.html" class="more">« More »</a>
+</div>
+<a name="SplQueue" id="SplQueue"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.SplQueue.html">
+<h1>SplQueue<a href="../classes/Zend.Stdlib.SplQueue.html">¶</a>
+</h1>
+<p class="short_description">Serializable version of SplQueue</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.SplQueue.html" class="more">« More »</a>
+</div>
+<a name="SplStack" id="SplStack"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.SplStack.html">
+<h1>SplStack<a href="../classes/Zend.Stdlib.SplStack.html">¶</a>
+</h1>
+<p class="short_description">Serializable version of SplStack</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.SplStack.html" class="more">« More »</a>
+</div>
+<a name="StringUtils" id="StringUtils"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.StringUtils.html">
+<h1>StringUtils<a href="../classes/Zend.Stdlib.StringUtils.html">¶</a>
+</h1>
+<p class="short_description">Utility class for handling strings of different character encodings
+using available PHP extensions.</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.StringUtils.html" class="more">« More »</a>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.html">Stdlib</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/Zend.Stdlib.ArrayUtils.html">ArrayUtils</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="MergeReplaceKeyInterface" id="MergeReplaceKeyInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.ArrayUtils.MergeReplaceKeyInterface.html">
+<h1>MergeReplaceKeyInterface<a href="../classes/Zend.Stdlib.ArrayUtils.MergeReplaceKeyInterface.html">¶</a>
+</h1>
+<p class="short_description">Marker interface: can be used to replace keys completely in {@see ArrayUtils::merge()} operations</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.ArrayUtils.MergeReplaceKeyInterface.html" class="more">« More »</a>
+</div>
+<a name="MergeRemoveKey" id="MergeRemoveKey"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.ArrayUtils.MergeRemoveKey.html">
+<h1>MergeRemoveKey<a href="../classes/Zend.Stdlib.ArrayUtils.MergeRemoveKey.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.ArrayUtils.MergeRemoveKey.html" class="more">« More »</a>
+</div>
+<a name="MergeReplaceKey" id="MergeReplaceKey"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.ArrayUtils.MergeReplaceKey.html">
+<h1>MergeReplaceKey<a href="../classes/Zend.Stdlib.ArrayUtils.MergeReplaceKey.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.ArrayUtils.MergeReplaceKey.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.html">Stdlib</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/Zend.Stdlib.Exception.html">Exception</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="ExceptionInterface" id="ExceptionInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Exception.ExceptionInterface.html">
+<h1>ExceptionInterface<a href="../classes/Zend.Stdlib.Exception.ExceptionInterface.html">¶</a>
+</h1>
+<p class="short_description">Exception marker interface</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Exception.ExceptionInterface.html" class="more">« More »</a>
+</div>
+<a name="BadMethodCallException" id="BadMethodCallException"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Exception.BadMethodCallException.html">
+<h1>BadMethodCallException<a href="../classes/Zend.Stdlib.Exception.BadMethodCallException.html">¶</a>
+</h1>
+<p class="short_description">Bad method call exception</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Exception.BadMethodCallException.html" class="more">« More »</a>
+</div>
+<a name="DomainException" id="DomainException"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Exception.DomainException.html">
+<h1>DomainException<a href="../classes/Zend.Stdlib.Exception.DomainException.html">¶</a>
+</h1>
+<p class="short_description">Domain exception</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Exception.DomainException.html" class="more">« More »</a>
+</div>
+<a name="ExtensionNotLoadedException" id="ExtensionNotLoadedException"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Exception.ExtensionNotLoadedException.html">
+<h1>ExtensionNotLoadedException<a href="../classes/Zend.Stdlib.Exception.ExtensionNotLoadedException.html">¶</a>
+</h1>
+<p class="short_description">Extension not loaded exception</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Exception.ExtensionNotLoadedException.html" class="more">« More »</a>
+</div>
+<a name="InvalidArgumentException" id="InvalidArgumentException"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Exception.InvalidArgumentException.html">
+<h1>InvalidArgumentException<a href="../classes/Zend.Stdlib.Exception.InvalidArgumentException.html">¶</a>
+</h1>
+<p class="short_description">Invalid Argument Exception</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Exception.InvalidArgumentException.html" class="more">« More »</a>
+</div>
+<a name="InvalidCallbackException" id="InvalidCallbackException"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Exception.InvalidCallbackException.html">
+<h1>InvalidCallbackException<a href="../classes/Zend.Stdlib.Exception.InvalidCallbackException.html">¶</a>
+</h1>
+<p class="short_description">Invalid callback exception</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Exception.InvalidCallbackException.html" class="more">« More »</a>
+</div>
+<a name="LogicException" id="LogicException"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Exception.LogicException.html">
+<h1>LogicException<a href="../classes/Zend.Stdlib.Exception.LogicException.html">¶</a>
+</h1>
+<p class="short_description">Logic exception</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Exception.LogicException.html" class="more">« More »</a>
+</div>
+<a name="RuntimeException" id="RuntimeException"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Exception.RuntimeException.html">
+<h1>RuntimeException<a href="../classes/Zend.Stdlib.Exception.RuntimeException.html">¶</a>
+</h1>
+<p class="short_description">Runtime exception</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Exception.RuntimeException.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.html">Stdlib</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/Zend.Stdlib.Extractor.html">Extractor</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="ExtractionInterface" id="ExtractionInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Extractor.ExtractionInterface.html">
+<h1>ExtractionInterface<a href="../classes/Zend.Stdlib.Extractor.ExtractionInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Extractor.ExtractionInterface.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.html">Stdlib</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/Zend.Stdlib.Guard.html">Guard</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="GuardUtils" id="GuardUtils"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Guard.GuardUtils.html">
+<h1>GuardUtils<a href="../classes/Zend.Stdlib.Guard.GuardUtils.html">¶</a>
+</h1>
+<p class="short_description">Static guard helper class</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Guard.GuardUtils.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.html">Stdlib</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/Zend.Stdlib.Hydrator.html">Hydrator</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="FilterEnabledInterface" id="FilterEnabledInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Hydrator.FilterEnabledInterface.html">
+<h1>FilterEnabledInterface<a href="../classes/Zend.Stdlib.Hydrator.FilterEnabledInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.FilterEnabledInterface.html" class="more">« More »</a>
+</div>
+<a name="HydrationInterface" id="HydrationInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Hydrator.HydrationInterface.html">
+<h1>HydrationInterface<a href="../classes/Zend.Stdlib.Hydrator.HydrationInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.HydrationInterface.html" class="more">« More »</a>
+</div>
+<a name="HydratorAwareInterface" id="HydratorAwareInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Hydrator.HydratorAwareInterface.html">
+<h1>HydratorAwareInterface<a href="../classes/Zend.Stdlib.Hydrator.HydratorAwareInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.HydratorAwareInterface.html" class="more">« More »</a>
+</div>
+<a name="HydratorInterface" id="HydratorInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Hydrator.HydratorInterface.html">
+<h1>HydratorInterface<a href="../classes/Zend.Stdlib.Hydrator.HydratorInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.HydratorInterface.html" class="more">« More »</a>
+</div>
+<a name="HydratorOptionsInterface" id="HydratorOptionsInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Hydrator.HydratorOptionsInterface.html">
+<h1>HydratorOptionsInterface<a href="../classes/Zend.Stdlib.Hydrator.HydratorOptionsInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.HydratorOptionsInterface.html" class="more">« More »</a>
+</div>
+<a name="NamingStrategyEnabledInterface" id="NamingStrategyEnabledInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Hydrator.NamingStrategyEnabledInterface.html">
+<h1>NamingStrategyEnabledInterface<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategyEnabledInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategyEnabledInterface.html" class="more">« More »</a>
+</div>
+<a name="StrategyEnabledInterface" id="StrategyEnabledInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Hydrator.StrategyEnabledInterface.html">
+<h1>StrategyEnabledInterface<a href="../classes/Zend.Stdlib.Hydrator.StrategyEnabledInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.StrategyEnabledInterface.html" class="more">« More »</a>
+</div>
+<a name="AbstractHydrator" id="AbstractHydrator"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.AbstractHydrator.html">
+<h1>AbstractHydrator<a href="../classes/Zend.Stdlib.Hydrator.AbstractHydrator.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.AbstractHydrator.html" class="more">« More »</a>
+</div>
+<a name="ArraySerializable" id="ArraySerializable"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.ArraySerializable.html">
+<h1>ArraySerializable<a href="../classes/Zend.Stdlib.Hydrator.ArraySerializable.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.ArraySerializable.html" class="more">« More »</a>
+</div>
+<a name="ClassMethods" id="ClassMethods"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.ClassMethods.html">
+<h1>ClassMethods<a href="../classes/Zend.Stdlib.Hydrator.ClassMethods.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.ClassMethods.html" class="more">« More »</a>
+</div>
+<a name="DelegatingHydrator" id="DelegatingHydrator"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.DelegatingHydrator.html">
+<h1>DelegatingHydrator<a href="../classes/Zend.Stdlib.Hydrator.DelegatingHydrator.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.DelegatingHydrator.html" class="more">« More »</a>
+</div>
+<a name="DelegatingHydratorFactory" id="DelegatingHydratorFactory"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.DelegatingHydratorFactory.html">
+<h1>DelegatingHydratorFactory<a href="../classes/Zend.Stdlib.Hydrator.DelegatingHydratorFactory.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.DelegatingHydratorFactory.html" class="more">« More »</a>
+</div>
+<a name="HydratorPluginManager" id="HydratorPluginManager"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.HydratorPluginManager.html">
+<h1>HydratorPluginManager<a href="../classes/Zend.Stdlib.Hydrator.HydratorPluginManager.html">¶</a>
+</h1>
+<p class="short_description">Plugin manager implementation for hydrators.</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.HydratorPluginManager.html" class="more">« More »</a>
+</div>
+<a name="ObjectProperty" id="ObjectProperty"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.ObjectProperty.html">
+<h1>ObjectProperty<a href="../classes/Zend.Stdlib.Hydrator.ObjectProperty.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.ObjectProperty.html" class="more">« More »</a>
+</div>
+<a name="Reflection" id="Reflection"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Reflection.html">
+<h1>Reflection<a href="../classes/Zend.Stdlib.Hydrator.Reflection.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Reflection.html" class="more">« More »</a>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.html">Stdlib</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.Hydrator.html">Hydrator</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/Zend.Stdlib.Hydrator.Aggregate.html">Aggregate</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="AggregateHydrator" id="AggregateHydrator"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Aggregate.AggregateHydrator.html">
+<h1>AggregateHydrator<a href="../classes/Zend.Stdlib.Hydrator.Aggregate.AggregateHydrator.html">¶</a>
+</h1>
+<p class="short_description">Aggregate hydrator that composes multiple hydrators via events</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Aggregate.AggregateHydrator.html" class="more">« More »</a>
+</div>
+<a name="ExtractEvent" id="ExtractEvent"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Aggregate.ExtractEvent.html">
+<h1>ExtractEvent<a href="../classes/Zend.Stdlib.Hydrator.Aggregate.ExtractEvent.html">¶</a>
+</h1>
+<p class="short_description">Event triggered when the {@see \Zend\Stdlib\Hydrator\Aggregate\AggregateHydrator} extracts
+data from an object</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Aggregate.ExtractEvent.html" class="more">« More »</a>
+</div>
+<a name="HydrateEvent" id="HydrateEvent"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Aggregate.HydrateEvent.html">
+<h1>HydrateEvent<a href="../classes/Zend.Stdlib.Hydrator.Aggregate.HydrateEvent.html">¶</a>
+</h1>
+<p class="short_description">Event triggered when the {@see \Zend\Stdlib\Hydrator\Aggregate\AggregateHydrator} hydrates
+data into an object</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Aggregate.HydrateEvent.html" class="more">« More »</a>
+</div>
+<a name="HydratorListener" id="HydratorListener"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Aggregate.HydratorListener.html">
+<h1>HydratorListener<a href="../classes/Zend.Stdlib.Hydrator.Aggregate.HydratorListener.html">¶</a>
+</h1>
+<p class="short_description">Aggregate listener wrapping around a hydrator.</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Aggregate.HydratorListener.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.html">Stdlib</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.Hydrator.html">Hydrator</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/Zend.Stdlib.Hydrator.Filter.html">Filter</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="FilterInterface" id="FilterInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Hydrator.Filter.FilterInterface.html">
+<h1>FilterInterface<a href="../classes/Zend.Stdlib.Hydrator.Filter.FilterInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Filter.FilterInterface.html" class="more">« More »</a>
+</div>
+<a name="FilterProviderInterface" id="FilterProviderInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Hydrator.Filter.FilterProviderInterface.html">
+<h1>FilterProviderInterface<a href="../classes/Zend.Stdlib.Hydrator.Filter.FilterProviderInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Filter.FilterProviderInterface.html" class="more">« More »</a>
+</div>
+<a name="FilterComposite" id="FilterComposite"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Filter.FilterComposite.html">
+<h1>FilterComposite<a href="../classes/Zend.Stdlib.Hydrator.Filter.FilterComposite.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Filter.FilterComposite.html" class="more">« More »</a>
+</div>
+<a name="GetFilter" id="GetFilter"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Filter.GetFilter.html">
+<h1>GetFilter<a href="../classes/Zend.Stdlib.Hydrator.Filter.GetFilter.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Filter.GetFilter.html" class="more">« More »</a>
+</div>
+<a name="HasFilter" id="HasFilter"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Filter.HasFilter.html">
+<h1>HasFilter<a href="../classes/Zend.Stdlib.Hydrator.Filter.HasFilter.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Filter.HasFilter.html" class="more">« More »</a>
+</div>
+<a name="IsFilter" id="IsFilter"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Filter.IsFilter.html">
+<h1>IsFilter<a href="../classes/Zend.Stdlib.Hydrator.Filter.IsFilter.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Filter.IsFilter.html" class="more">« More »</a>
+</div>
+<a name="MethodMatchFilter" id="MethodMatchFilter"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Filter.MethodMatchFilter.html">
+<h1>MethodMatchFilter<a href="../classes/Zend.Stdlib.Hydrator.Filter.MethodMatchFilter.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Filter.MethodMatchFilter.html" class="more">« More »</a>
+</div>
+<a name="NumberOfParameterFilter" id="NumberOfParameterFilter"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Filter.NumberOfParameterFilter.html">
+<h1>NumberOfParameterFilter<a href="../classes/Zend.Stdlib.Hydrator.Filter.NumberOfParameterFilter.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Filter.NumberOfParameterFilter.html" class="more">« More »</a>
+</div>
+<a name="OptionalParametersFilter" id="OptionalParametersFilter"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Filter.OptionalParametersFilter.html">
+<h1>OptionalParametersFilter<a href="../classes/Zend.Stdlib.Hydrator.Filter.OptionalParametersFilter.html">¶</a>
+</h1>
+<p class="short_description">Filter that includes methods which have no parameters or only optional parameters</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Filter.OptionalParametersFilter.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.html">Stdlib</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.Hydrator.html">Hydrator</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/Zend.Stdlib.Hydrator.NamingStrategy.html">NamingStrategy</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="NamingStrategyInterface" id="NamingStrategyInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.NamingStrategyInterface.html">
+<h1>NamingStrategyInterface<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.NamingStrategyInterface.html">¶</a>
+</h1>
+<p class="short_description">Allow property extraction / hydration for hydrator</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.NamingStrategyInterface.html" class="more">« More »</a>
+</div>
+<a name="ArrayMapNamingStrategy" id="ArrayMapNamingStrategy"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.ArrayMapNamingStrategy.html">
+<h1>ArrayMapNamingStrategy<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.ArrayMapNamingStrategy.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.ArrayMapNamingStrategy.html" class="more">« More »</a>
+</div>
+<a name="CompositeNamingStrategy" id="CompositeNamingStrategy"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.CompositeNamingStrategy.html">
+<h1>CompositeNamingStrategy<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.CompositeNamingStrategy.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.CompositeNamingStrategy.html" class="more">« More »</a>
+</div>
+<a name="IdentityNamingStrategy" id="IdentityNamingStrategy"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.IdentityNamingStrategy.html">
+<h1>IdentityNamingStrategy<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.IdentityNamingStrategy.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.IdentityNamingStrategy.html" class="more">« More »</a>
+</div>
+<a name="MapNamingStrategy" id="MapNamingStrategy"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.MapNamingStrategy.html">
+<h1>MapNamingStrategy<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.MapNamingStrategy.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.MapNamingStrategy.html" class="more">« More »</a>
+</div>
+<a name="UnderscoreNamingStrategy" id="UnderscoreNamingStrategy"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.UnderscoreNamingStrategy.html">
+<h1>UnderscoreNamingStrategy<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.UnderscoreNamingStrategy.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.NamingStrategy.UnderscoreNamingStrategy.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.html">Stdlib</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.Hydrator.html">Hydrator</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/Zend.Stdlib.Hydrator.Strategy.html">Strategy</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="StrategyInterface" id="StrategyInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Hydrator.Strategy.StrategyInterface.html">
+<h1>StrategyInterface<a href="../classes/Zend.Stdlib.Hydrator.Strategy.StrategyInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Strategy.StrategyInterface.html" class="more">« More »</a>
+</div>
+<a name="BooleanStrategy" id="BooleanStrategy"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Strategy.BooleanStrategy.html">
+<h1>BooleanStrategy<a href="../classes/Zend.Stdlib.Hydrator.Strategy.BooleanStrategy.html">¶</a>
+</h1>
+<p class="short_description">This Strategy extracts and hydrates int and string values to Boolean values</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Strategy.BooleanStrategy.html" class="more">« More »</a>
+</div>
+<a name="ClosureStrategy" id="ClosureStrategy"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Strategy.ClosureStrategy.html">
+<h1>ClosureStrategy<a href="../classes/Zend.Stdlib.Hydrator.Strategy.ClosureStrategy.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Strategy.ClosureStrategy.html" class="more">« More »</a>
+</div>
+<a name="DateTimeFormatterStrategy" id="DateTimeFormatterStrategy"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Strategy.DateTimeFormatterStrategy.html">
+<h1>DateTimeFormatterStrategy<a href="../classes/Zend.Stdlib.Hydrator.Strategy.DateTimeFormatterStrategy.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Strategy.DateTimeFormatterStrategy.html" class="more">« More »</a>
+</div>
+<a name="DefaultStrategy" id="DefaultStrategy"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Strategy.DefaultStrategy.html">
+<h1>DefaultStrategy<a href="../classes/Zend.Stdlib.Hydrator.Strategy.DefaultStrategy.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Strategy.DefaultStrategy.html" class="more">« More »</a>
+</div>
+<a name="ExplodeStrategy" id="ExplodeStrategy"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Strategy.ExplodeStrategy.html">
+<h1>ExplodeStrategy<a href="../classes/Zend.Stdlib.Hydrator.Strategy.ExplodeStrategy.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Strategy.ExplodeStrategy.html" class="more">« More »</a>
+</div>
+<a name="SerializableStrategy" id="SerializableStrategy"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Strategy.SerializableStrategy.html">
+<h1>SerializableStrategy<a href="../classes/Zend.Stdlib.Hydrator.Strategy.SerializableStrategy.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Strategy.SerializableStrategy.html" class="more">« More »</a>
+</div>
+<a name="StrategyChain" id="StrategyChain"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Strategy.StrategyChain.html">
+<h1>StrategyChain<a href="../classes/Zend.Stdlib.Hydrator.Strategy.StrategyChain.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Strategy.StrategyChain.html" class="more">« More »</a>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.html">Stdlib</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.Hydrator.html">Hydrator</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.Hydrator.Strategy.html">Strategy</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/Zend.Stdlib.Hydrator.Strategy.Exception.html">Exception</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="ExceptionInterface" id="ExceptionInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.Hydrator.Strategy.Exception.ExceptionInterface.html">
+<h1>ExceptionInterface<a href="../classes/Zend.Stdlib.Hydrator.Strategy.Exception.ExceptionInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Strategy.Exception.ExceptionInterface.html" class="more">« More »</a>
+</div>
+<a name="InvalidArgumentException" id="InvalidArgumentException"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.Hydrator.Strategy.Exception.InvalidArgumentException.html">
+<h1>InvalidArgumentException<a href="../classes/Zend.Stdlib.Hydrator.Strategy.Exception.InvalidArgumentException.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.Hydrator.Strategy.Exception.InvalidArgumentException.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.html">Stdlib</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/Zend.Stdlib.JsonSerializable.html">JsonSerializable</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="PhpLegacyCompatibility" id="PhpLegacyCompatibility"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.JsonSerializable.PhpLegacyCompatibility.html">
+<h1>PhpLegacyCompatibility<a href="../classes/Zend.Stdlib.JsonSerializable.PhpLegacyCompatibility.html">¶</a>
+</h1>
+<p class="short_description">Interface compatible with the built-in JsonSerializable interface</p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.JsonSerializable.PhpLegacyCompatibility.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Stdlib.html">Stdlib</a></li>
+<span class="divider">\</span><li class="active"><a href="../namespaces/Zend.Stdlib.StringWrapper.html">StringWrapper</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="StringWrapperInterface" id="StringWrapperInterface"></a><div class="element ajax clickable interface" href="../classes/Zend.Stdlib.StringWrapper.StringWrapperInterface.html">
+<h1>StringWrapperInterface<a href="../classes/Zend.Stdlib.StringWrapper.StringWrapperInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.StringWrapper.StringWrapperInterface.html" class="more">« More »</a>
+</div>
+<a name="AbstractStringWrapper" id="AbstractStringWrapper"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.StringWrapper.AbstractStringWrapper.html">
+<h1>AbstractStringWrapper<a href="../classes/Zend.Stdlib.StringWrapper.AbstractStringWrapper.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.StringWrapper.AbstractStringWrapper.html" class="more">« More »</a>
+</div>
+<a name="Iconv" id="Iconv"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.StringWrapper.Iconv.html">
+<h1>Iconv<a href="../classes/Zend.Stdlib.StringWrapper.Iconv.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.StringWrapper.Iconv.html" class="more">« More »</a>
+</div>
+<a name="Intl" id="Intl"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.StringWrapper.Intl.html">
+<h1>Intl<a href="../classes/Zend.Stdlib.StringWrapper.Intl.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.StringWrapper.Intl.html" class="more">« More »</a>
+</div>
+<a name="MbString" id="MbString"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.StringWrapper.MbString.html">
+<h1>MbString<a href="../classes/Zend.Stdlib.StringWrapper.MbString.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.StringWrapper.MbString.html" class="more">« More »</a>
+</div>
+<a name="Native" id="Native"></a><div class="element ajax clickable class" href="../classes/Zend.Stdlib.StringWrapper.Native.html">
+<h1>Native<a href="../classes/Zend.Stdlib.StringWrapper.Native.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Zend.Stdlib.StringWrapper.Native.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a8</a> and<br>
+            generated on 2015-06-18T09:13:13-05:00.<br></footer></div>
+</div>
+</body>
+</html>

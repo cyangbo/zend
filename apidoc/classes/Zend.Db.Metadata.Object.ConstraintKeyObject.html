@@ -1,0 +1,400 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend Framework » \Zend\Db\Metadata\Object\ConstraintKeyObject</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">
+                        Zend Framework
+                    </a><div class="nav-collapse"><ul class="nav"><li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/ZendXml.html"><i class="icon-th"></i> ZendXml</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+</ul>
+</li></ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#getColumnName" title="getColumnName :: Get column name"><span class="description">Get column name</span><pre>getColumnName()</pre></a></li>
+<li class="method public "><a href="#getForeignKeyDeleteRule" title="getForeignKeyDeleteRule :: get foreign key delete rule"><span class="description">get foreign key delete rule</span><pre>getForeignKeyDeleteRule()</pre></a></li>
+<li class="method public "><a href="#getForeignKeyUpdateRule" title="getForeignKeyUpdateRule :: Get foreign key update rule"><span class="description">Get foreign key update rule</span><pre>getForeignKeyUpdateRule()</pre></a></li>
+<li class="method public "><a href="#getOrdinalPosition" title="getOrdinalPosition :: Get ordinal position"><span class="description">Get ordinal position</span><pre>getOrdinalPosition()</pre></a></li>
+<li class="method public "><a href="#getPositionInUniqueConstraint" title="getPositionInUniqueConstraint :: Get position in unique constraint"><span class="description">Get position in unique constraint</span><pre>getPositionInUniqueConstraint()</pre></a></li>
+<li class="method public "><a href="#getReferencedColumnName" title="getReferencedColumnName :: Get referenced column name"><span class="description">Get referenced column name</span><pre>getReferencedColumnName()</pre></a></li>
+<li class="method public "><a href="#getReferencedTableName" title="getReferencedTableName :: Get referenced table name"><span class="description">Get referenced table name</span><pre>getReferencedTableName()</pre></a></li>
+<li class="method public "><a href="#getReferencedTableSchema" title="getReferencedTableSchema :: Get referencred table schema"><span class="description">Get referencred table schema</span><pre>getReferencedTableSchema()</pre></a></li>
+<li class="method public "><a href="#setColumnName" title="setColumnName :: Set column name"><span class="description">Set column name</span><pre>setColumnName()</pre></a></li>
+<li class="method public "><a href="#setForeignKeyDeleteRule" title="setForeignKeyDeleteRule :: Set foreign key delete rule"><span class="description">Set foreign key delete rule</span><pre>setForeignKeyDeleteRule()</pre></a></li>
+<li class="method public "><a href="#setForeignKeyUpdateRule" title="setForeignKeyUpdateRule :: set foreign key update rule"><span class="description">set foreign key update rule</span><pre>setForeignKeyUpdateRule()</pre></a></li>
+<li class="method public "><a href="#setOrdinalPosition" title="setOrdinalPosition :: Set ordinal position"><span class="description">Set ordinal position</span><pre>setOrdinalPosition()</pre></a></li>
+<li class="method public "><a href="#setPositionInUniqueConstraint" title="setPositionInUniqueConstraint :: Set position in unique constraint"><span class="description">Set position in unique constraint</span><pre>setPositionInUniqueConstraint()</pre></a></li>
+<li class="method public "><a href="#setReferencedColumnName" title="setReferencedColumnName :: Set referenced column name"><span class="description">Set referenced column name</span><pre>setReferencedColumnName()</pre></a></li>
+<li class="method public "><a href="#setReferencedTableName" title="setReferencedTableName :: Set Referenced table name"><span class="description">Set Referenced table name</span><pre>setReferencedTableName()</pre></a></li>
+<li class="method public "><a href="#setReferencedTableSchema" title="setReferencedTableSchema :: Set referenced table schema"><span class="description">Set referenced table schema</span><pre>setReferencedTableSchema()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24columnName" title="$columnName :: "><span class="description">$columnName</span><pre>$columnName</pre></a></li>
+<li class="property protected "><a href="#%24foreignKeyDeleteRule" title="$foreignKeyDeleteRule :: "><span class="description">$foreignKeyDeleteRule</span><pre>$foreignKeyDeleteRule</pre></a></li>
+<li class="property protected "><a href="#%24foreignKeyUpdateRule" title="$foreignKeyUpdateRule :: "><span class="description">$foreignKeyUpdateRule</span><pre>$foreignKeyUpdateRule</pre></a></li>
+<li class="property protected "><a href="#%24ordinalPosition" title="$ordinalPosition :: "><span class="description">$ordinalPosition</span><pre>$ordinalPosition</pre></a></li>
+<li class="property protected "><a href="#%24positionInUniqueConstraint" title="$positionInUniqueConstraint :: "><span class="description">$positionInUniqueConstraint</span><pre>$positionInUniqueConstraint</pre></a></li>
+<li class="property protected "><a href="#%24referencedColumnName" title="$referencedColumnName :: "><span class="description">$referencedColumnName</span><pre>$referencedColumnName</pre></a></li>
+<li class="property protected "><a href="#%24referencedTableName" title="$referencedTableName :: "><span class="description">$referencedTableName</span><pre>$referencedTableName</pre></a></li>
+<li class="property protected "><a href="#%24referencedTableSchema" title="$referencedTableSchema :: "><span class="description">$referencedTableSchema</span><pre>$referencedTableSchema</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#FK_CASCADE" title="FK_CASCADE :: "><span class="description">FK_CASCADE</span><pre>FK_CASCADE</pre></a></li>
+<li class="constant  "><a href="#FK_NO_ACTION" title="FK_NO_ACTION :: "><span class="description">FK_NO_ACTION</span><pre>FK_NO_ACTION</pre></a></li>
+<li class="constant  "><a href="#FK_RESTRICT" title="FK_RESTRICT :: "><span class="description">FK_RESTRICT</span><pre>FK_RESTRICT</pre></a></li>
+<li class="constant  "><a href="#FK_SET_DEFAULT" title="FK_SET_DEFAULT :: "><span class="description">FK_SET_DEFAULT</span><pre>FK_SET_DEFAULT</pre></a></li>
+<li class="constant  "><a href="#FK_SET_NULL" title="FK_SET_NULL :: "><span class="description">FK_SET_NULL</span><pre>FK_SET_NULL</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CZend%5CDb%5CMetadata%5CObject%5CConstraintKeyObject" id="\Zend\Db\Metadata\Object\ConstraintKeyObject"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Db.html">Db</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Db.Metadata.html">Metadata</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Db.Metadata.Object.html">Object</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html">ConstraintKeyObject</a>
+</li>
+</ul>
+<div href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html" class="element class"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(string $column) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$column</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a name="getColumnName" id="getColumnName"></a><div class="element clickable method public getColumnName" data-toggle="collapse" data-target=".getColumnName .collapse">
+<h2>Get column name</h2>
+<pre>getColumnName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getForeignKeyDeleteRule" id="getForeignKeyDeleteRule"></a><div class="element clickable method public getForeignKeyDeleteRule" data-toggle="collapse" data-target=".getForeignKeyDeleteRule .collapse">
+<h2>get foreign key delete rule</h2>
+<pre>getForeignKeyDeleteRule() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getForeignKeyUpdateRule" id="getForeignKeyUpdateRule"></a><div class="element clickable method public getForeignKeyUpdateRule" data-toggle="collapse" data-target=".getForeignKeyUpdateRule .collapse">
+<h2>Get foreign key update rule</h2>
+<pre>getForeignKeyUpdateRule() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getOrdinalPosition" id="getOrdinalPosition"></a><div class="element clickable method public getOrdinalPosition" data-toggle="collapse" data-target=".getOrdinalPosition .collapse">
+<h2>Get ordinal position</h2>
+<pre>getOrdinalPosition() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a name="getPositionInUniqueConstraint" id="getPositionInUniqueConstraint"></a><div class="element clickable method public getPositionInUniqueConstraint" data-toggle="collapse" data-target=".getPositionInUniqueConstraint .collapse">
+<h2>Get position in unique constraint</h2>
+<pre>getPositionInUniqueConstraint() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="getReferencedColumnName" id="getReferencedColumnName"></a><div class="element clickable method public getReferencedColumnName" data-toggle="collapse" data-target=".getReferencedColumnName .collapse">
+<h2>Get referenced column name</h2>
+<pre>getReferencedColumnName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getReferencedTableName" id="getReferencedTableName"></a><div class="element clickable method public getReferencedTableName" data-toggle="collapse" data-target=".getReferencedTableName .collapse">
+<h2>Get referenced table name</h2>
+<pre>getReferencedTableName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getReferencedTableSchema" id="getReferencedTableSchema"></a><div class="element clickable method public getReferencedTableSchema" data-toggle="collapse" data-target=".getReferencedTableSchema .collapse">
+<h2>Get referencred table schema</h2>
+<pre>getReferencedTableSchema() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="setColumnName" id="setColumnName"></a><div class="element clickable method public setColumnName" data-toggle="collapse" data-target=".setColumnName .collapse">
+<h2>Set column name</h2>
+<pre>setColumnName(string $columnName) : <a href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html">\Zend\Db\Metadata\Object\ConstraintKeyObject</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$columnName</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html">\Zend\Db\Metadata\Object\ConstraintKeyObject</a></code></div>
+</div></div>
+</div>
+<a name="setForeignKeyDeleteRule" id="setForeignKeyDeleteRule"></a><div class="element clickable method public setForeignKeyDeleteRule" data-toggle="collapse" data-target=".setForeignKeyDeleteRule .collapse">
+<h2>Set foreign key delete rule</h2>
+<pre>setForeignKeyDeleteRule(string $foreignKeyDeleteRule) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$foreignKeyDeleteRule</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a name="setForeignKeyUpdateRule" id="setForeignKeyUpdateRule"></a><div class="element clickable method public setForeignKeyUpdateRule" data-toggle="collapse" data-target=".setForeignKeyUpdateRule .collapse">
+<h2>set foreign key update rule</h2>
+<pre>setForeignKeyUpdateRule(string $foreignKeyUpdateRule) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$foreignKeyUpdateRule</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a name="setOrdinalPosition" id="setOrdinalPosition"></a><div class="element clickable method public setOrdinalPosition" data-toggle="collapse" data-target=".setOrdinalPosition .collapse">
+<h2>Set ordinal position</h2>
+<pre>setOrdinalPosition(int $ordinalPosition) : <a href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html">\Zend\Db\Metadata\Object\ConstraintKeyObject</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$ordinalPosition</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html">\Zend\Db\Metadata\Object\ConstraintKeyObject</a></code></div>
+</div></div>
+</div>
+<a name="setPositionInUniqueConstraint" id="setPositionInUniqueConstraint"></a><div class="element clickable method public setPositionInUniqueConstraint" data-toggle="collapse" data-target=".setPositionInUniqueConstraint .collapse">
+<h2>Set position in unique constraint</h2>
+<pre>setPositionInUniqueConstraint(bool $positionInUniqueConstraint) : <a href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html">\Zend\Db\Metadata\Object\ConstraintKeyObject</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$positionInUniqueConstraint</h4>
+<code>bool</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html">\Zend\Db\Metadata\Object\ConstraintKeyObject</a></code></div>
+</div></div>
+</div>
+<a name="setReferencedColumnName" id="setReferencedColumnName"></a><div class="element clickable method public setReferencedColumnName" data-toggle="collapse" data-target=".setReferencedColumnName .collapse">
+<h2>Set referenced column name</h2>
+<pre>setReferencedColumnName(string $referencedColumnName) : <a href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html">\Zend\Db\Metadata\Object\ConstraintKeyObject</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$referencedColumnName</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html">\Zend\Db\Metadata\Object\ConstraintKeyObject</a></code></div>
+</div></div>
+</div>
+<a name="setReferencedTableName" id="setReferencedTableName"></a><div class="element clickable method public setReferencedTableName" data-toggle="collapse" data-target=".setReferencedTableName .collapse">
+<h2>Set Referenced table name</h2>
+<pre>setReferencedTableName(string $referencedTableName) : <a href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html">\Zend\Db\Metadata\Object\ConstraintKeyObject</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$referencedTableName</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html">\Zend\Db\Metadata\Object\ConstraintKeyObject</a></code></div>
+</div></div>
+</div>
+<a name="setReferencedTableSchema" id="setReferencedTableSchema"></a><div class="element clickable method public setReferencedTableSchema" data-toggle="collapse" data-target=".setReferencedTableSchema .collapse">
+<h2>Set referenced table schema</h2>
+<pre>setReferencedTableSchema(string $referencedTableSchema) : <a href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html">\Zend\Db\Metadata\Object\ConstraintKeyObject</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$referencedTableSchema</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Zend.Db.Metadata.Object.ConstraintKeyObject.html">\Zend\Db\Metadata\Object\ConstraintKeyObject</a></code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24columnName" id="$columnName"> </a><div class="element clickable property protected $columnName" data-toggle="collapse" data-target=".$columnName .collapse">
+<h2>$columnName</h2>
+<pre>$columnName : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24foreignKeyDeleteRule" id="$foreignKeyDeleteRule"> </a><div class="element clickable property protected $foreignKeyDeleteRule" data-toggle="collapse" data-target=".$foreignKeyDeleteRule .collapse">
+<h2>$foreignKeyDeleteRule</h2>
+<pre>$foreignKeyDeleteRule : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24foreignKeyUpdateRule" id="$foreignKeyUpdateRule"> </a><div class="element clickable property protected $foreignKeyUpdateRule" data-toggle="collapse" data-target=".$foreignKeyUpdateRule .collapse">
+<h2>$foreignKeyUpdateRule</h2>
+<pre>$foreignKeyUpdateRule : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24ordinalPosition" id="$ordinalPosition"> </a><div class="element clickable property protected $ordinalPosition" data-toggle="collapse" data-target=".$ordinalPosition .collapse">
+<h2>$ordinalPosition</h2>
+<pre>$ordinalPosition : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24positionInUniqueConstraint" id="$positionInUniqueConstraint"> </a><div class="element clickable property protected $positionInUniqueConstraint" data-toggle="collapse" data-target=".$positionInUniqueConstraint .collapse">
+<h2>$positionInUniqueConstraint</h2>
+<pre>$positionInUniqueConstraint : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24referencedColumnName" id="$referencedColumnName"> </a><div class="element clickable property protected $referencedColumnName" data-toggle="collapse" data-target=".$referencedColumnName .collapse">
+<h2>$referencedColumnName</h2>
+<pre>$referencedColumnName : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24referencedTableName" id="$referencedTableName"> </a><div class="element clickable property protected $referencedTableName" data-toggle="collapse" data-target=".$referencedTableName .collapse">
+<h2>$referencedTableName</h2>
+<pre>$referencedTableName : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24referencedTableSchema" id="$referencedTableSchema"> </a><div class="element clickable property protected $referencedTableSchema" data-toggle="collapse" data-target=".$referencedTableSchema .collapse">
+<h2>$referencedTableSchema</h2>
+<pre>$referencedTableSchema : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="FK_CASCADE" id="FK_CASCADE"> </a><div class="element clickable constant  FK_CASCADE" data-toggle="collapse" data-target=".FK_CASCADE .collapse">
+<h2>FK_CASCADE</h2>
+<pre>FK_CASCADE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="FK_NO_ACTION" id="FK_NO_ACTION"> </a><div class="element clickable constant  FK_NO_ACTION" data-toggle="collapse" data-target=".FK_NO_ACTION .collapse">
+<h2>FK_NO_ACTION</h2>
+<pre>FK_NO_ACTION </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="FK_RESTRICT" id="FK_RESTRICT"> </a><div class="element clickable constant  FK_RESTRICT" data-toggle="collapse" data-target=".FK_RESTRICT .collapse">
+<h2>FK_RESTRICT</h2>
+<pre>FK_RESTRICT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="FK_SET_DEFAULT" id="FK_SET_DEFAULT"> </a><div class="element clickable constant  FK_SET_DEFAULT" data-toggle="collapse" data-target=".FK_SET_DEFAULT .collapse">
+<h2>FK_SET_DEFAULT</h2>
+<pre>FK_SET_DEFAULT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="FK_SET_NULL" id="FK_SET_NULL"> </a><div class="element clickable constant  FK_SET_NULL" data-toggle="collapse" data-target=".FK_SET_NULL .collapse">
+<h2>FK_SET_NULL</h2>
+<pre>FK_SET_NULL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a8</a> and<br>
+            generated on 2015-06-18T09:26:16-05:00.<br></footer></div>
+</div>
+</body>
+</html>

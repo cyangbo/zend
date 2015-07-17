@@ -1,0 +1,310 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend Framework » \Zend\Code\Generator\TraitUsageInterface</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">
+                        Zend Framework
+                    </a><div class="nav-collapse"><ul class="nav"><li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/ZendXml.html"><i class="icon-th"></i> ZendXml</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+</ul>
+</li></ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#addTrait" title="addTrait :: Add trait takes an array of trait options or string as arguments."><span class="description">Add trait takes an array of trait options or string as arguments.</span><pre>addTrait()</pre></a></li>
+<li class="method public "><a href="#addTraitAlias" title="addTraitAlias :: Add a trait alias."><span class="description">Add a trait alias.</span><pre>addTraitAlias()</pre></a></li>
+<li class="method public "><a href="#addTraitOverride" title="addTraitOverride :: Add a trait method override."><span class="description">Add a trait method override.</span><pre>addTraitOverride()</pre></a></li>
+<li class="method public "><a href="#addTraits" title="addTraits :: Add multiple traits."><span class="description">Add multiple traits.</span><pre>addTraits()</pre></a></li>
+<li class="method public "><a href="#addUse" title='addUse :: Add a class to "use" classes'><span class="description">Add a class to "use" classes</span><pre>addUse()</pre></a></li>
+<li class="method public "><a href="#getTraitAliases" title="getTraitAliases :: "><span class="description">getTraitAliases()
+        </span><pre>getTraitAliases()</pre></a></li>
+<li class="method public "><a href="#getTraitOverrides" title="getTraitOverrides :: Return trait overrides"><span class="description">Return trait overrides</span><pre>getTraitOverrides()</pre></a></li>
+<li class="method public "><a href="#getTraits" title="getTraits :: Get a list of trait names"><span class="description">Get a list of trait names</span><pre>getTraits()</pre></a></li>
+<li class="method public "><a href="#getUses" title='getUses :: Returns the "use" classes'><span class="description">Returns the "use" classes</span><pre>getUses()</pre></a></li>
+<li class="method public "><a href="#hasTrait" title="hasTrait :: Check to see if the class has a trait defined"><span class="description">Check to see if the class has a trait defined</span><pre>hasTrait()</pre></a></li>
+<li class="method public "><a href="#removeTrait" title="removeTrait :: Remove a trait by its name"><span class="description">Remove a trait by its name</span><pre>removeTrait()</pre></a></li>
+<li class="method public "><a href="#removeTraitOverride" title="removeTraitOverride :: Remove an override for a given trait::method"><span class="description">Remove an override for a given trait::method</span><pre>removeTraitOverride()</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CZend%5CCode%5CGenerator%5CTraitUsageInterface" id="\Zend\Code\Generator\TraitUsageInterface"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Code.html">Code</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Code.Generator.html">Generator</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Code.Generator.TraitUsageInterface.html">TraitUsageInterface</a>
+</li>
+</ul>
+<div href="../classes/Zend.Code.Generator.TraitUsageInterface.html" class="element interface"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="addTrait" id="addTrait"></a><div class="element clickable method public addTrait" data-toggle="collapse" data-target=".addTrait .collapse">
+<h2>Add trait takes an array of trait options or string as arguments.</h2>
+<pre>addTrait(mixed $trait) : \Zend\Code\Generator\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Array Format:
+key: traitName value: String</p>
+
+<p>key: aliases value: array of arrays
+     key: method value: @see addTraitAlias
+     key: alias value: @see addTraitAlias
+     key: visibility value: @see addTraitAlias</p>
+
+<p>key: insteadof value: array of arrays
+     key: method value: @see self::addTraitOverride
+     key: traitToReplace value: @see self::addTraitOverride</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$trait</h4>
+<code>mixed</code><p>String | Array</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Code\Generator\self</code></div>
+</div></div>
+</div>
+<a name="addTraitAlias" id="addTraitAlias"></a><div class="element clickable method public addTraitAlias" data-toggle="collapse" data-target=".addTraitAlias .collapse">
+<h2>Add a trait alias.</h2>
+<pre>addTraitAlias(mixed $method, string $alias, $visibility) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This will be used to generate the AS portion of the use statement.</p>
+
+<p>$method:
+This method provides 2 ways for defining the trait method.
+Option 1: String
+Option 2: Array
+key: traitName value: name of trait
+key: method value: trait method</p>
+
+<p>$alias:
+Alias is a string representing the new method name.</p>
+
+<p>$visibilty:
+ReflectionMethod::IS_PUBLIC | ReflectionMethod::IS_PRIVATE| ReflectionMethod::IS_PROTECTED</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$method</h4>
+<code>mixed</code><p>String or Array</p></div>
+<div class="subelement argument">
+<h4>$alias</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$visibility</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="addTraitOverride" id="addTraitOverride"></a><div class="element clickable method public addTraitOverride" data-toggle="collapse" data-target=".addTraitOverride .collapse">
+<h2>Add a trait method override.</h2>
+<pre>addTraitOverride(mixed $method, $traitsToReplace) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This will be used to generate the INSTEADOF portion of the use
+statement.</p>
+
+<p>$method:
+This method provides 2 ways for defining the trait method.
+Option 1: String Format: <trait name>::<method name>
+Option 2: Array
+key: traitName value: trait name
+key: method value: method name</p>
+
+<p>$traitToReplace:
+The name of the trait that you wish to supersede.</p>
+
+<p>This method provides 2 ways for defining the trait method.
+Option 1: String of trait to replace
+Option 2: Array of strings of traits to replace</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$method</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$traitsToReplace</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="addTraits" id="addTraits"></a><div class="element clickable method public addTraits" data-toggle="collapse" data-target=".addTraits .collapse">
+<h2>Add multiple traits.</h2>
+<pre>addTraits(array $traits) : \Zend\Code\Generator\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Trait can be an array of trait names or array of trait
+configurations</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$traits</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Code\Generator\self</code></div>
+</div></div>
+</div>
+<a name="addUse" id="addUse"></a><div class="element clickable method public addUse" data-toggle="collapse" data-target=".addUse .collapse">
+<h2>Add a class to "use" classes</h2>
+<pre>addUse(string $use, string | null $useAlias) : \Zend\Code\Generator\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$use</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$useAlias</h4>
+<code>stringnull</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Code\Generator\self</code></div>
+</div></div>
+</div>
+<a name="getTraitAliases" id="getTraitAliases"></a><div class="element clickable method public getTraitAliases" data-toggle="collapse" data-target=".getTraitAliases .collapse">
+<h2>getTraitAliases()
+        </h2>
+<pre>getTraitAliases() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getTraitOverrides" id="getTraitOverrides"></a><div class="element clickable method public getTraitOverrides" data-toggle="collapse" data-target=".getTraitOverrides .collapse">
+<h2>Return trait overrides</h2>
+<pre>getTraitOverrides() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getTraits" id="getTraits"></a><div class="element clickable method public getTraits" data-toggle="collapse" data-target=".getTraits .collapse">
+<h2>Get a list of trait names</h2>
+<pre>getTraits() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getUses" id="getUses"></a><div class="element clickable method public getUses" data-toggle="collapse" data-target=".getUses .collapse">
+<h2>Returns the "use" classes</h2>
+<pre>getUses() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="hasTrait" id="hasTrait"></a><div class="element clickable method public hasTrait" data-toggle="collapse" data-target=".hasTrait .collapse">
+<h2>Check to see if the class has a trait defined</h2>
+<pre>hasTrait(\Zend\Code\Generator\strint $traitName) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$traitName</h4>
+<code>\Zend\Code\Generator\strint</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="removeTrait" id="removeTrait"></a><div class="element clickable method public removeTrait" data-toggle="collapse" data-target=".removeTrait .collapse">
+<h2>Remove a trait by its name</h2>
+<pre>removeTrait($traitName) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$traitName</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="removeTraitOverride" id="removeTraitOverride"></a><div class="element clickable method public removeTraitOverride" data-toggle="collapse" data-target=".removeTraitOverride .collapse">
+<h2>Remove an override for a given trait::method</h2>
+<pre>removeTraitOverride($method, null $overridesToRemove) : \Zend\Code\Generator\$this</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>$method:
+This method provides 2 ways for defining the trait method.
+Option 1: String Format: <trait name>::<method name>
+Option 2: Array
+key: traitName value: trait name
+key: method value: method name</p>
+
+<p>$overridesToRemove:
+The name of the trait that you wish to remove.</p>
+
+<p>This method provides 2 ways for defining the trait method.
+Option 1: String of trait to replace
+Option 2: Array of strings of traits to replace</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$method</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$overridesToRemove</h4>
+<code>null</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Code\Generator\$this</code></div>
+</div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a8</a> and<br>
+            generated on 2015-06-18T09:17:49-05:00.<br></footer></div>
+</div>
+</body>
+</html>

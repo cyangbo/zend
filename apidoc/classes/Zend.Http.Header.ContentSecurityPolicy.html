@@ -1,0 +1,187 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Zend Framework » \Zend\Http\Header\ContentSecurityPolicy</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">
+                        Zend Framework
+                    </a><div class="nav-collapse"><ul class="nav"><li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Zend.html"><i class="icon-th"></i> Zend</a></li>
+<li><a href="../namespaces/ZendXml.html"><i class="icon-th"></i> ZendXml</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Zend.html"><i class="icon-folder-open"></i> Zend</a></li>
+</ul>
+</li></ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#fromString" title="fromString :: Create Content Security Policy header from a given header line"><span class="description">Create Content Security Policy header from a given header line</span><pre>fromString()</pre></a></li>
+<li class="method public "><a href="#getDirectives" title="getDirectives :: Get the list of defined directives"><span class="description">Get the list of defined directives</span><pre>getDirectives()</pre></a></li>
+<li class="method public "><a href="#getFieldName" title="getFieldName :: Get the header name"><span class="description">Get the header name</span><pre>getFieldName()</pre></a></li>
+<li class="method public "><a href="#getFieldValue" title="getFieldValue :: Get the header value"><span class="description">Get the header value</span><pre>getFieldValue()</pre></a></li>
+<li class="method public "><a href="#setDirective" title="setDirective :: Sets the directive to consist of the source list"><span class="description">Sets the directive to consist of the source list</span><pre>setDirective()</pre></a></li>
+<li class="method public "><a href="#toString" title="toString :: Return the header as a string"><span class="description">Return the header as a string</span><pre>toString()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24directives" title="$directives :: The directives defined for this policy"><span class="description">The directives defined for this policy</span><pre>$directives</pre></a></li>
+<li class="property protected "><a href="#%24validDirectiveNames" title="$validDirectiveNames :: Valid directive names"><span class="description">Valid directive names</span><pre>$validDirectiveNames</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CZend%5CHttp%5CHeader%5CContentSecurityPolicy" id="\Zend\Http\Header\ContentSecurityPolicy"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Zend.html">Zend</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Http.html">Http</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Zend.Http.Header.html">Header</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Zend.Http.Header.ContentSecurityPolicy.html">ContentSecurityPolicy</a>
+</li>
+</ul>
+<div href="../classes/Zend.Http.Header.ContentSecurityPolicy.html" class="element class">
+<p class="short_description">Content Security Policy 1.0 Header</p>
+<div class="details">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>link</th>
+<td><a href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="fromString" id="fromString"></a><div class="element clickable method public fromString" data-toggle="collapse" data-target=".fromString .collapse">
+<h2>Create Content Security Policy header from a given header line</h2>
+<pre>fromString(string $headerLine) : \Zend\Http\Header\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$headerLine</h4>
+<code>string</code><p>The header line to parse.</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Http.Header.Exception.InvalidArgumentException.html">\Zend\Http\Header\Exception\InvalidArgumentException</a></code></th>
+<td>If the name field in the given header line does not match.</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Http\Header\self</code></div>
+</div></div>
+</div>
+<a name="getDirectives" id="getDirectives"></a><div class="element clickable method public getDirectives" data-toggle="collapse" data-target=".getDirectives .collapse">
+<h2>Get the list of defined directives</h2>
+<pre>getDirectives() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getFieldName" id="getFieldName"></a><div class="element clickable method public getFieldName" data-toggle="collapse" data-target=".getFieldName .collapse">
+<h2>Get the header name</h2>
+<pre>getFieldName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getFieldValue" id="getFieldValue"></a><div class="element clickable method public getFieldValue" data-toggle="collapse" data-target=".getFieldValue .collapse">
+<h2>Get the header value</h2>
+<pre>getFieldValue() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="setDirective" id="setDirective"></a><div class="element clickable method public setDirective" data-toggle="collapse" data-target=".setDirective .collapse">
+<h2>Sets the directive to consist of the source list</h2>
+<pre>setDirective(string $name, array $sources) : \Zend\Http\Header\self</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Reverses http://www.w3.org/TR/CSP/#parsing-1</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The directive name.</p></div>
+<div class="subelement argument">
+<h4>$sources</h4>
+<code>array</code><p>The source list.</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/Zend.Http.Header.Exception.InvalidArgumentException.html">\Zend\Http\Header\Exception\InvalidArgumentException</a></code></th>
+<td>If the name is not a valid directive name.</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Zend\Http\Header\self</code></div>
+</div></div>
+</div>
+<a name="toString" id="toString"></a><div class="element clickable method public toString" data-toggle="collapse" data-target=".toString .collapse">
+<h2>Return the header as a string</h2>
+<pre>toString() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Returns in form of "NAME: VALUE"</p></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24directives" id="$directives"> </a><div class="element clickable property protected $directives" data-toggle="collapse" data-target=".$directives .collapse">
+<h2>The directives defined for this policy</h2>
+<pre>$directives : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24validDirectiveNames" id="$validDirectiveNames"> </a><div class="element clickable property protected $validDirectiveNames" data-toggle="collapse" data-target=".$validDirectiveNames .collapse">
+<h2>Valid directive names</h2>
+<pre>$validDirectiveNames : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a8</a> and<br>
+            generated on 2015-06-18T09:13:45-05:00.<br></footer></div>
+</div>
+</body>
+</html>
