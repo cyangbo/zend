@@ -17,6 +17,16 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
 		
 	}
+	
+	//添加一个资源到引导
+	protected function _initDoctype(){
+		
+		$this->bootstrap('view');
+		$view = $this->getResource('view');
+		$view->doctype('XHTML1_STRICT');
+		
+	}
+	
 
 }
 
